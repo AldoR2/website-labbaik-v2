@@ -1,6 +1,6 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
-        <li class="nav-item nav-profile">
+        {{-- <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
                 <div class="nav-profile-image">
                     <img src="{{ URL::asset('assets/images/faces/face1.jpg') }}" alt="profile">
@@ -13,7 +13,7 @@
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
-        </li>
+        </li> --}}
         <li class="nav-item">
             <a class="nav-link" href="/admin/home">
                 <span class="menu-title">Dashboard</span>
@@ -23,13 +23,14 @@
         <li class="nav-item">
             <a class="nav-link" href="/admin/blog">
                 <span class="menu-title">Blog</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/admin/rapat">
                 <span class="menu-title">Rapat</span>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                <i class="mdi mdi-contacts menu-icon"></i>
+
             </a>
         </li>
         <li class="nav-item">
@@ -42,12 +43,12 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Kominfo</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Syiar</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Kemuslimahan</a>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/kominfo">Kominfo</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/syiar">Syiar</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/kemuslimahan">Kemuslimahan</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">PSDM</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">KWU</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/psdm">PSDM</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/kwu">KWU</a></li>
                 </ul>
             </div>
         </li>

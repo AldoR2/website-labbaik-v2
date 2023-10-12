@@ -12,7 +12,8 @@ class KominfoController extends Controller
      */
     public function index()
     {
-        return view('admin.departement.kominfo.index');
+        $data = Kominfo::all();
+        return view('admin.departement.kominfo.index', compact('data'));
     }
 
     /**
@@ -20,7 +21,7 @@ class KominfoController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -28,7 +29,10 @@ class KominfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['foto'] = $request->file('foto')->store('kominfo', 'public');
+        Kominfo::create($data);
+        return redirect('/admin/kominfo');
     }
 
     /**
@@ -50,16 +54,24 @@ class KominfoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Kominfo $kominfo)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        if (!empty($data['foto'])) {
+            $data['foto'] = $request->file('foto')->store('kominfo', 'public');
+        } else {
+            unset($data['foto']);
+        }
+        Kominfo::findOrFail($id)->update($data);
+        return redirect('/admin/kominfo');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kominfo $kominfo)
+    public function destroy($id)
     {
-        //
+        Kominfo::findOrFail($id)->delete();
+        return  redirect('/admin/kominfo');
     }
 }

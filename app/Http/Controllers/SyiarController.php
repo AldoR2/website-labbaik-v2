@@ -12,7 +12,8 @@ class SyiarController extends Controller
      */
     public function index()
     {
-        return view('admin.departement.syiar.index');
+        $data = Syiar::all();
+        return view('admin.departement.syiar.index', compact('data'));
     }
 
     /**
@@ -20,7 +21,7 @@ class SyiarController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -28,13 +29,16 @@ class SyiarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['foto'] = $request->file('foto')->store('syiar', 'public');
+        Syiar::create($data);
+        return redirect('/admin/syiar');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Syiar $syiar)
+    public function show(Kominfo $kominfo)
     {
         //
     }
@@ -42,7 +46,7 @@ class SyiarController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Syiar $syiar)
+    public function edit(Kominfo $kominfo)
     {
         //
     }
@@ -50,16 +54,24 @@ class SyiarController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Syiar $syiar)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        if (!empty($data['foto'])) {
+            $data['foto'] = $request->file('foto')->store('syiar', 'public');
+        } else {
+            unset($data['foto']);
+        }
+        Syiar::findOrFail($id)->update($data);
+        return redirect('/admin/syiar');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Syiar $syiar)
+    public function destroy($id)
     {
-        //
+        Syiar::findOrFail($id)->delete();
+        return  redirect('/admin/syiar');
     }
 }

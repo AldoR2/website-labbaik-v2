@@ -7,13 +7,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>UKM LABBAIK</title>
 
+    <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo_LABAIK.png') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{ URL::asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/vendors/css/vendor.bundle.base.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico') }}" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="{{ URL::asset('style/style.css') }}" />
     <link rel="stylesheet" href="{{ URL::asset('fontawesome/css/all.min.css') }}">
@@ -54,10 +55,19 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html"><img
-                        src="{{ URL::asset('assets/images/logo.svg') }}" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img
-                        src="{{ URL::asset('assets/images/logo-mini.svg') }}" alt="logo" /></a>
+                <a class="brand-logo navbar-brand" href="">
+                    <h2 class="fw-bold" style="color: black; font-weight: bold; font-family: Pacifico">Labbaik</h2>
+                    {{-- <img
+                        src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" alt="logo"
+                        style="object-fit: cover" /> --}}
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="index.html">
+                    <img src="{{ URL::asset('assets/images/Logo_LABAIK.png') }}" alt="" width="100px"
+                        class="py-2" />
+
+                    {{-- <img
+                        src="{{ URL::asset('assets/images/logo-mini.svg') }}" alt="logo" /> --}}
+                </a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-stretch">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">

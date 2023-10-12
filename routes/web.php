@@ -22,7 +22,7 @@ use App\Http\Controllers\admin\dashboardController;
 */
 
 Route::get('/', function () {
-    return view('admin.layouts.main');
+    return view('userGuest.index');
 });
 
 Route::prefix('admin')->group(function () {
@@ -42,36 +42,36 @@ Route::prefix('admin')->group(function () {
     // departement
     // kominfo
     Route::get('/kominfo', [KominfoController::class, 'index']);
-    // ROute::post('/saveRapat', [rapatController::class, 'store']);
-    // Route::put('/rapat/{id}', [rapatController::class, 'update']);
-    // Route::delete('/rapat/{id}', [rapatController::class, 'destroy']);
+    ROute::post('/saveKominfo', [KominfoController::class, 'store']);
+    Route::put('/kominfo/{id}', [KominfoController::class, 'update']);
+    Route::delete('/kominfo/{id}', [KominfoController::class, 'destroy']);
 
     // departement
     // syiar
     Route::get('/syiar', [SyiarController::class, 'index']);
-    // ROute::post('/saveRapat', [rapatController::class, 'store']);
-    // Route::put('/rapat/{id}', [rapatController::class, 'update']);
-    // Route::delete('/rapat/{id}', [rapatController::class, 'destroy']);
+    ROute::post('/saveSyiar', [SyiarController::class, 'store']);
+    Route::put('/syiar/{id}', [SyiarController::class, 'update']);
+    Route::delete('/syiar/{id}', [SyiarController::class, 'destroy']);
 
     // departement
     // kemuslimahan
     Route::get('/kemuslimahan', [KemuslimahanController::class, 'index']);
-    // ROute::post('/saveRapat', [rapatController::class, 'store']);
-    // Route::put('/rapat/{id}', [rapatController::class, 'update']);
-    // Route::delete('/rapat/{id}', [rapatController::class, 'destroy']);
+    ROute::post('/saveKemuslimahan', [KemuslimahanController::class, 'store']);
+    Route::put('/kemuslimahan/{id}', [KemuslimahanController::class, 'update']);
+    Route::delete('/kemuslimahan/{id}', [KemuslimahanController::class, 'destroy']);
 
     // departement
     // psdm
     Route::get('/psdm', [PsdmController::class, 'index']);
-    // ROute::post('/saveRapat', [rapatController::class, 'store']);
-    // Route::put('/rapat/{id}', [rapatController::class, 'update']);
-    // Route::delete('/rapat/{id}', [rapatController::class, 'destroy']);
+    ROute::post('/savePsdm', [PsdmController::class, 'store']);
+    Route::put('/psdm/{id}', [PsdmController::class, 'update']);
+    Route::delete('/psdm/{id}', [PsdmController::class, 'destroy']);
 
     // departement
     // kwu
     Route::get('/kwu', [KwuController::class, 'index']);
-    // ROute::post('/saveRapat', [rapatController::class, 'store']);
-    // Route::put('/rapat/{id}', [rapatController::class, 'update']);
-    // Route::delete('/rapat/{id}', [rapatController::class, 'destroy']);
+    ROute::post('/saveKwu', [KwuController::class, 'store']);
+    Route::put('/kwu/{id}', [KwuController::class, 'update']);
+    Route::delete('/kwu/{id}', [KwuController::class, 'destroy']);
 
 });

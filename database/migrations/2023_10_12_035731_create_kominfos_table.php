@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('kominfos', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->date('tanggal_lahir');
+            $table->string('departement');
+            $table->string('foto');
+            $table->text('moto')->nullable();;
+            $table->softDeletes();
             $table->timestamps();
         });
     }
