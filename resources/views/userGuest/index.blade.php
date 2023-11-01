@@ -55,11 +55,13 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li> --}}
+                    <li><a class="nav-link scrollto" href="#services">Visi Misi</a></li>
+                    <li><a class="nav-link scrollto" href="#artikel">Artikel</a></li>
                     <li class="dropdown"><a href="#"><span>Departement</span> <i
                                 class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Kominfo</a></li>
+                            <li><a href="#team">Kominfo</a></li>
                             {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
                                         class="bi bi-chevron-right"></i></a>
                                 <ul>
@@ -70,10 +72,10 @@
                                     <li><a href="#">Deep Drop Down 5</a></li>
                                 </ul>
                             </li> --}}
-                            <li><a href="#">Syiar</a></li>
-                            <li><a href="#">Kemuslimahan</a></li>
-                            <li><a href="#">PSDM</a></li>
-                            <li><a href="#">KWU</a></li>
+                            <li><a href="#team">Syiar</a></li>
+                            <li><a href="#team">Kemuslimahan</a></li>
+                            <li><a href="#team">PSDM</a></li>
+                            <li><a href="#team">KWU</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -111,46 +113,7 @@
 
     <main id="main">
 
-        <!-- ======= Clients Section ======= -->
-        {{-- <section id="clients" class="clients section-bg">
-            <div class="container">
 
-                <div class="row" data-aos="zoom-in">
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-1.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-2.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-3.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-4.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-5.png') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                        <img src="{{ URL::asset('users/assets/img/clients/client-6.pngh') }}" class="img-fluid"
-                            alt="">
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Cliens Section --> --}}
 
         <!-- ======= About Us Section ======= -->
         <section id="about" class="about">
@@ -161,38 +124,34 @@
                 </div>
 
                 <div class="row content">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            UKM Labaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
+                            satu-satunya UKM Kerohanian Islam di Kampus Politeknik Negeri Jember. UKM Labaik lahir atas
+                            sebuah keinginan yang mulia. Sebuah niat untuk membentuk ladang aktualisasi keislaman.
+                            Banyak manfaat yang dapat kita ambil jika bergabung dengan ukm Labbaik diantaranya :
                         </p>
+
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in
-                                voluptate velit</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
+                            <li><i class="ri-check-double-line"></i>Menambah wawasan keislaman</li>
+                            <li><i class="ri-check-double-line"></i>Menambah saudara seiman</li>
+                            <li><i class="ri-check-double-line"></i>Softskill dan hardskill semakin terlatih </li>
                         </ul>
+
+
+
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <a href="#" class="btn-learn-more">Learn More</a>
-                    </div>
+
+                    <a href="#" class="btn-learn-more col-lg-2">Join
+                        Labbaik yuk</a>
+
                 </div>
 
             </div>
         </section><!-- End About Us Section -->
 
         <!-- ======= Why Us Section ======= -->
-        <section id="why-us" class="why-us section-bg">
+        {{-- <section id="why-us" class="why-us section-bg">
             <div class="container-fluid" data-aos="fade-up">
 
                 <div class="row">
@@ -267,10 +226,10 @@
                 </div>
 
             </div>
-        </section><!-- End Why Us Section -->
+        </section><!-- End Why Us Section --> --}}
 
         <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills">
+        {{-- <section id="skills" class="skills">
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
@@ -325,17 +284,17 @@
                 </div>
 
             </div>
-        </section><!-- End Skills Section -->
+        </section><!-- End Skills Section --> --}}
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                    <h2>Visi dan Misi</h2>
+                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
 
                 <div class="row">
@@ -381,7 +340,7 @@
         </section><!-- End Services Section -->
 
         <!-- ======= Cta Section ======= -->
-        <section id="cta" class="cta">
+        {{-- <section id="cta" class="cta">
             <div class="container" data-aos="zoom-in">
 
                 <div class="row">
@@ -397,14 +356,14 @@
                 </div>
 
             </div>
-        </section><!-- End Cta Section -->
+        </section><!-- End Cta Section --> --}}
 
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <section id="artikel" class="portfolio">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Portfolio</h2>
+                    <h2>Artikel</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
@@ -413,9 +372,9 @@
                 <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up"
                     data-aos-delay="100">
                     <li data-filter="*" class="filter-active">All</li>
-                    <li data-filter=".filter-app">App</li>
-                    <li data-filter=".filter-card">Card</li>
-                    <li data-filter=".filter-web">Web</li>
+                    <li data-filter=".filter-app">Artikel</li>
+                    <li data-filter=".filter-card">Rapat</li>
+                    {{-- <li data-filter=".filter-web">Web</li> --}}
                 </ul>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
@@ -561,14 +520,14 @@
         </section><!-- End Portfolio Section -->
 
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team section-bg">
+        <section id="team" class="team section-bg" style="padding-top:5rem;">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Team</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
+                    <h2>Struktur Anggota UKM Labbaik</h2>
+                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
                         sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
 
                 <div class="row">
@@ -578,8 +537,8 @@
                             <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
+                                <h4>Aji</h4>
+                                <span>Ketum</span>
                                 <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -596,8 +555,8 @@
                             <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-2.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
+                                <h4>Fitri</h4>
+                                <span>wakil</span>
                                 <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -614,8 +573,8 @@
                             <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-3.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
+                                <h4>Sintyowati</h4>
+                                <span>Sekretaris</span>
                                 <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -632,8 +591,8 @@
                             <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-4.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
+                                <h4>Aprillia</h4>
+                                <span>Bendahara</span>
                                 <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
