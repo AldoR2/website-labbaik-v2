@@ -6,8 +6,6 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>UKM LABBAIK</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
 
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo_LABAIK.png') }}">
 
@@ -47,7 +45,9 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
 
-            <h1 class="logo me-auto"><a href="index.html">UKM LABBAIK</a></h1>
+            {{-- <h1 class="logo me-auto"><a href="index.html">UKM LABBAIK</a></h1> --}}
+            <h1 class="logo me-auto logo-labbaik" style="color: white; font-weight: bold;">UKM Labbaik
+            </h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -55,13 +55,12 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <li class="dropdown"><a href="#"><span>Departement</span> <i
+                                class="bi bi-chevron-down"></i></a>
                         <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
+                            <li><a href="#">Kominfo</a></li>
+                            {{-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i
                                         class="bi bi-chevron-right"></i></a>
                                 <ul>
                                     <li><a href="#">Deep Drop Down 1</a></li>
@@ -70,14 +69,15 @@
                                     <li><a href="#">Deep Drop Down 4</a></li>
                                     <li><a href="#">Deep Drop Down 5</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
+                            </li> --}}
+                            <li><a href="#">Syiar</a></li>
+                            <li><a href="#">Kemuslimahan</a></li>
+                            <li><a href="#">PSDM</a></li>
+                            <li><a href="#">KWU</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                    <li><a class="getstarted scrollto" href="/login">Get Started</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -89,20 +89,20 @@
     <section id="hero" class="d-flex align-items-center">
 
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                     data-aos="fade-up" data-aos-delay="200">
-                    <h1>Better Solutions For Your Business</h1>
-                    <h2>We are team of talented designers making websites with Bootstrap</h2>
-                    <div class="d-flex justify-content-center justify-content-lg-start">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                    <h1>Salam Labbaik !!!</h1>
+                    <h2>Bersama Labbaik ayo lebih baik...</h2>
+                    <div class="d-flex justify-content-center ">
+                        <a href="/login" class="btn-get-started scrollto">Get Started</a>
                         <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" class="glightbox btn-watch-video"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ URL::asset('users/assets/img/hero-img.png') }}" class="img-fluid animated"
-                        alt="">
+                <div class=" col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" class="img-fluid animated"
+                        alt="" width="250">
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
     <main id="main">
 
         <!-- ======= Clients Section ======= -->
-        <section id="clients" class="clients section-bg">
+        {{-- <section id="clients" class="clients section-bg">
             <div class="container">
 
                 <div class="row" data-aos="zoom-in">
@@ -150,7 +150,7 @@
                 </div>
 
             </div>
-        </section><!-- End Cliens Section -->
+        </section><!-- End Cliens Section --> --}}
 
         <!-- ======= About Us Section ======= -->
         <section id="about" class="about">

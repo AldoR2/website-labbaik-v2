@@ -89,19 +89,38 @@
                         <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="nav-profile-img">
-                                <img src="{{ URL::asset('assets/images/faces/face1.jpg') }}" alt="image">
+                                <img src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" alt="image">
                                 <span class="availability-status online"></span>
                             </div>
                             <div class="nav-profile-text">
-                                <p class="mb-1 text-black">Ahmad Hidayat</p>
+                                <p class="mb-1 text-black">{{ auth()->user()->name }}</p>
                             </div>
                         </a>
                         <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
-                            <a class="dropdown-item" href="#">
+                            {{-- <a class="dropdown-item" href="#">
                                 <i class="mdi mdi-cached me-2 text-success"></i> Profile </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                                <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+                            <div class="dropdown-divider"></div> --}}
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                     Swal.fire({
+                                    title: '<span>Do you want to logout ?</span>',
+                                    icon: 'question',
+                                    showCancelButton: true,
+                                    confirmButtonColor: '#d33',
+                                    cancelButtonColor: '#3085d6',
+                                    confirmButtonText: 'Yes',
+                                    cancelButtonText: 'Cancel',
+                                    width:'400px'
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        document.getElementById('logout-form').submit();
+                                    }
+                                });">
+                                {{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </div>
                     </li>
                     <li class="nav-item d-none d-lg-block full-screen-link">

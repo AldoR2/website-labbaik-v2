@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KwuController;
 use App\Http\Controllers\PsdmController;
@@ -26,7 +27,7 @@ Route::get('/', function () {
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/home', [dashboardController::class, 'index']);
+    Route::get('/', [dashboardController::class, 'index']);
     // blog
     Route::get('/blog', [blogController::class, 'index']);
     ROute::post('/saveBlog', [blogController::class, 'store']);
@@ -73,5 +74,8 @@ Route::prefix('admin')->group(function () {
     ROute::post('/saveKwu', [KwuController::class, 'store']);
     Route::put('/kwu/{id}', [KwuController::class, 'update']);
     Route::delete('/kwu/{id}', [KwuController::class, 'destroy']);
-
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
