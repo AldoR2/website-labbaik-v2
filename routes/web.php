@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\blogController;
 use App\Http\Controllers\admin\rapatController;
 use App\Http\Controllers\KemuslimahanController;
 use App\Http\Controllers\admin\dashboardController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,10 +23,9 @@ use App\Http\Controllers\admin\dashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('userGuest.index');
-});
+Route::get('/',  [LandingPageController::class, 'index']);
 
+// Route::get('/cek', [LandingPageController::class, 'index']);
 Route::prefix('admin')->group(function () {
     Route::get('/', [dashboardController::class, 'index']);
     // blog
