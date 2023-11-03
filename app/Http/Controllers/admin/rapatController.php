@@ -75,4 +75,11 @@ class rapatController extends Controller
         Rapat::findOrFail($id)->delete();
         return  redirect('/admin/rapat');
     }
+
+    // public function rapat()
+    // {
+    //     $rapats = Rapat::latest()->paginate(3);
+    //     // dd($data);
+    //     return view('userGuest.index', ['rapat' => $rapats]);
+    // }
 }

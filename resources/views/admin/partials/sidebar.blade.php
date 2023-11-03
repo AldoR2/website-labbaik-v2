@@ -15,7 +15,7 @@
             </a>
         </li> --}}
         <li class="nav-item">
-            <a class="nav-link" href="/admin/home">
+            <a class="nav-link" href="/admin/">
                 <span class="menu-title">Dashboard</span>
                 <i class="mdi mdi-home menu-icon"></i>
             </a>
@@ -30,6 +30,13 @@
             <a class="nav-link" href="/admin/rapat">
                 <span class="menu-title">Rapat</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
+
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin/bph">
+                <span class="menu-title">BPH</span>
+                <i class="mdi mdi-account-multiple menu-icon"></i>
 
             </a>
         </li>

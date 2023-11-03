@@ -21,7 +21,6 @@ class KwuController extends Controller
      */
     public function create()
     {
-
     }
 
     /**
@@ -35,25 +34,6 @@ class KwuController extends Controller
         return redirect('/admin/kwu');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Kominfo $kominfo)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Kominfo $kominfo)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, $id)
     {
         $data = $request->all();

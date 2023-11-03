@@ -38,7 +38,7 @@
         }
 
         .btn-outline-info {
-            color: #3498db;
+            color: #47b2e4;
             /* warna teks awalnya (biru) */
             background-color: transparent;
             /* latar belakang awalnya (transparan untuk outline) */
@@ -49,7 +49,7 @@
         .btn-outline-info:hover {
             color: #fff;
             /* warna teks saat di-hover (putih) */
-            background-color: #3498db;
+            background-color: #47b2e4;
             /* latar belakang saat di-hover (biru) */
         }
 
@@ -71,6 +71,14 @@
             width: 100%;
             max-width: 600px;
             /* Sesuaikan lebar modal sesuai kebutuhan */
+        }
+
+        section#rapat {
+            margin-top: -90px !important;
+        }
+
+        .modal-content {
+            margin-top: 500px !important;
         }
     </style>
 </head>
@@ -135,11 +143,9 @@
         <!-- ======= About Us Section ======= -->
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-title">
                     <h2>About Us</h2>
                 </div>
-
                 <div class="row content">
                     <div class="col-lg-12">
                         <p>
@@ -180,7 +186,7 @@
                     <div class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                         data-aos-delay="100">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                            {{-- <div class="icon"><i class="bx bxl-dribbble"></i></div> --}}
                             <h4><a href="">Berjiwa Qurani</a></h4>
                             <p>Menciptakan mahasiswa yang berjiwa qurani
                             </p>
@@ -189,7 +195,7 @@
                     <div class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
                         data-aos-delay="200">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bx-file"></i></div>
+                            {{-- <div class="icon"><i class="bx bx-file"></i></div> --}}
                             <h4><a href="">Berakhlak Al-Qur'an dan as <br>Sunnah</a></h4>
                             <p>Menciptakan mahasiswa yang senantiasa <br> berakhlak Al-Qur'an dan as-Sunnah</p>
                         </div>
@@ -197,13 +203,11 @@
                     <div class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
                         data-aos-delay="300">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
+                            {{-- <div class="icon"><i class="bx bx-tachometer"></i></div> --}}
                             <h4><a href="">Menjunjung tinggi nilai-<br>nilai ketakwaan</a></h4>
                             <p>Mahasiswa mampu menjunjung tinggi nilai-nilai ketakwaan dan bernafaskan Islam</p>
                         </div>
                     </div>
-
-
                 </div>
 
             </div>
@@ -218,25 +222,6 @@
                     @foreach ($data as $item)
                         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                             <div class="member d-flex align-items-start">
-                                {{-- <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="images"
-                                    width="100"> --}}
-                                {{-- <div class="pic">
-                                    <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="img-fluid"> --}}
-
-                                {{-- <img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                        class="img-fluid" alt=""> --}}
-                                {{-- </div> --}}
-                                {{--
-                                <div class="member-info">
-                                    <h4>
-                                        <a href="#" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop{{ $item->id }}">{{ $item->judul }}</a>
-                                    </h4>
-                                    <hr>
-                                    <p>{{ $item->description }}</p>
-                                </div> --}}
-
-
                                 <a href="#" data-bs-toggle="modal"
                                     data-bs-target="#staticBackdrop{{ $item->id }}">
                                     <div class="card border-0" style="width: 18rem;">
@@ -244,10 +229,6 @@
                                             class="img-fluid" style="height: 150px !important; object-fit: cover;">
                                         <div class="card-body">
                                             <h4 class="text-center">{{ $item->judul }}</h4>
-                                            {{-- <p class="card-text">Sed semper eros aliquam nulla vulputate
-                                                egestas.
-                                                Suspendisse porttitor velit felis. </p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a> --}}
                                         </div>
                                     </div>
 
@@ -295,8 +276,9 @@
                 </div>
 
             </div>
-        </section><!-- End Team Section -->
-        <section id="rapat" class="team section-bg mb-0 mt-0" style="padding-top:5rem; background:white;">
+        </section>
+        <!-- End Team Section -->
+        <section id="rapat" class="team section-bg mb-0 mt-0" style="padding-top:5rem; background : white">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Rapat</h2>
@@ -305,36 +287,13 @@
                     @foreach ($rapats as $rapat)
                         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                             <div class="member d-flex align-items-start">
-                                {{-- <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="images"
-                                    width="100"> --}}
-                                {{-- <div class="pic">
-                                    <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="img-fluid"> --}}
-
-                                {{-- <img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                        class="img-fluid" alt=""> --}}
-                                {{-- </div> --}}
-                                {{--
-                                <div class="member-info">
-                                    <h4>
-                                        <a href="#" data-bs-toggle="modal"
-                                            data-bs-target="#staticBackdrop{{ $item->id }}">{{ $item->judul }}</a>
-                                    </h4>
-                                    <hr>
-                                    <p>{{ $item->description }}</p>
-                                </div> --}}
-
-
                                 <a href="#" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop{{ $rapat->id }}">
+                                    data-bs-target="#rapatmodal{{ $rapat->id }}">
                                     <div class="card border-0" style="width: 18rem;">
                                         <img src="{{ url('storage/' . $rapat->foto) }}" alt="gambar"
                                             class="img-fluid" style="height: 150px !important; object-fit: cover;">
                                         <div class="card-body">
-                                            <h4 class="text-center">{{ $rapat->hasil_rapat }}</h4>
-                                            {{-- <p class="card-text">Sed semper eros aliquam nulla vulputate
-                                                egestas.
-                                                Suspendisse porttitor velit felis. </p>
-                                            <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                                            <h4 class="text-center">{{ $rapat->agenda_rapat }}</h4>
                                         </div>
                                     </div>
 
@@ -343,14 +302,14 @@
                             </div>
                         </div>
 
-                        <div class="modal fade" id="staticBackdrop{{ $rapat->id }}" data-bs-backdrop="static"
+                        <div class="modal fade" id="rapatmodal{{ $rapat->id }}" data-bs-backdrop="static"
                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content mt-5">
                                     <div class="modal-header">
                                         <p class="modal-title" id="exampleModalLabel">
-                                            <b> Post : </b>{{ $rapat->tanggal_post }}
+                                            <b> Post : </b>{{ $rapat->tanggal_rapat }}
                                         </p>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -365,9 +324,25 @@
                                                             alt="gambar" class="card-img-top"
                                                             style="height: 195px !important; object-fit: cover;">
                                                         <div class="card-body">
-                                                            <h4 class="text-center">{{ $rapat->judul }}
+                                                            <h4 class="text-center">{{ $rapat->agenda_rapat }}
                                                             </h4>
-                                                            <p style="text-align: justify;">{{ $item->description }}
+                                                            <p style="text-align: justify;"> <b>Note : </b>
+                                                                <br> {{ $rapat->note }} !!
+                                                            </p>
+                                                            <p style="text-align: justify;"> <b>Waktu : </b>
+                                                                <br>{{ $rapat->tanggal_rapat }}
+                                                            </p>
+                                                            <p style="text-align: justify;"> <b>Tempat : </b>
+                                                                <br>{{ $rapat->tempat_rapat }}
+                                                            </p>
+                                                            <p style="text-align: justify;"> <b>Hadir : </b>
+                                                                <br>{{ $rapat->jumlah_yang_hadir }} orang
+                                                            </p>
+                                                            <p style="text-align: justify;"> <b>Tidak Hadir : </b>
+                                                                <br>{{ $rapat->jumlah_yang_tidak_hadir }} orang
+                                                            </p>
+                                                            <p style="text-align: justify;"> <b>Hasil : </b>
+                                                                <br>{{ $rapat->hasil_rapat }}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -390,9 +365,6 @@
 
                 <div class="section-title">
                     <h2>Struktur Anggota UKM Labbaik</h2>
-                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
 
                 <div class="row">
@@ -417,7 +389,7 @@
 
                     <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-2.jpg') }}"
+                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Fitri</h4>
@@ -452,7 +424,7 @@
                     </div>
                     <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
                         <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-4.jpg') }}"
+                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-3.jpg') }}"
                                     class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Aprillia</h4>
@@ -721,17 +693,21 @@
             </div>
         </div>
 
-        <div class="container footer-bottom clearfix">
+        <div class="container footer-bottom clearfix mt-5 p-0">
             <div class="copyright">
                 &copy; Copyright <strong><span>UKM Labbaik</span></strong>
+                <p class="text-center align-content-center align-items-center justify-content-center">source <a
+                        href="https://getbootstrap.com/" target="_blank">bootstrap</a></p>
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 {{-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ --}}
-                Development by <a href="https://www.linkedin.com/in/ahmad-hidayat-a6120b220/">Ahmad Hidayat</a> <br>
+                Development by <a href="https://www.linkedin.com/in/ahmad-hidayat-a6120b220/" target="_blank">Ahmad
+                    Hidayat</a> <br>
                 {{-- Design by <a href=" https://bootstrapmade.com/license/">bootstrap</a> --}}
+
             </div>
         </div>
     </footer><!-- End Footer -->

@@ -14,18 +14,19 @@ class LandingPageController extends Controller
     public function index()
     {
         $data = Blog::latest()->paginate(3);
+        $rapats = Rapat::latest()->paginate(3);
         // dd($data);
-        return view('userGuest.index', ['data' => $data]);
+        return view('userGuest.index', ['data' => $data, 'rapats' => $rapats]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function rapat()
+    public function detail_anggota()
     {
-        $rapats = Rapat::latest()->paginate(3);
-        // dd($rapat);
-        return view('userGuest.index', compact('rapats'));
+        // $rapats = Rapat::latest()->paginate(3);
+        // dd($rapats);
+        return view('userGuest.detail_pengurus');
     }
 
     /**

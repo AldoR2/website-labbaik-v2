@@ -10,6 +10,7 @@ use App\Http\Controllers\admin\blogController;
 use App\Http\Controllers\admin\rapatController;
 use App\Http\Controllers\KemuslimahanController;
 use App\Http\Controllers\admin\dashboardController;
+use App\Http\Controllers\BphController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -44,6 +45,11 @@ Route::prefix('admin')->group(function () {
 
     // departement
     // kominfo
+    Route::get('/bph', [BphController::class, 'index']);
+    ROute::post('/saveBph', [BphController::class, 'store']);
+    Route::put('/bph/{id}', [BphController::class, 'update']);
+    Route::delete('/bph/{id}', [BphController::class, 'destroy']);
+
     Route::get('/kominfo', [KominfoController::class, 'index']);
     ROute::post('/saveKominfo', [KominfoController::class, 'store']);
     Route::put('/kominfo/{id}', [KominfoController::class, 'update']);
