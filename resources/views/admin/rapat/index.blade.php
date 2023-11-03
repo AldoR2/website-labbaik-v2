@@ -103,7 +103,7 @@
                                             <textarea name="hasil_rapat" id="hasil_rapat" cols="30" rows="3" class="form-control">{{ $item->hasil_rapat }}</textarea>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="note" class="mb-1">Tanggal Rapat</label>
+                                            <label for="note" class="mb-1">Note</label>
                                             <input type="text" class="form-control" id="note" name="note"
                                                 value="{{ $item->note }}">
                                         </div>

@@ -241,9 +241,9 @@
                                     data-bs-target="#staticBackdrop{{ $item->id }}">
                                     <div class="card border-0" style="width: 18rem;">
                                         <img src="{{ url('storage/' . $item->foto) }}" alt="gambar"
-                                            class="img-fluid" height="100px">
+                                            class="img-fluid" style="height: 150px !important; object-fit: cover;">
                                         <div class="card-body">
-                                            <h5 class="card-title text-center">{{ $item->judul }}</h5>
+                                            <h4 class="text-center">{{ $item->judul }}</h4>
                                             {{-- <p class="card-text">Sed semper eros aliquam nulla vulputate
                                                 egestas.
                                                 Suspendisse porttitor velit felis. </p>
@@ -275,11 +275,99 @@
                                                     <div class="card" style="width: 24rem;">
                                                         {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
                                                         <img src="{{ url('storage/' . $item->foto) }}" alt="gambar"
-                                                            class="card-img-top">
+                                                            class="card-img-top"
+                                                            style="height: 195px !important; object-fit: cover;">
                                                         <div class="card-body">
-                                                            <h5 class="card-title text-center">{{ $item->judul }}
-                                                            </h5>
-                                                            <p class="card-text">{{ $item->description }}
+                                                            <h4 class="text-center">{{ $item->judul }}
+                                                            </h4>
+                                                            <p style="text-align: justify;">{{ $item->description }}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+        <section id="rapat" class="team section-bg mb-0 mt-0" style="padding-top:5rem; background:white;">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Rapat</h2>
+                </div>
+                <div class="row">
+                    @foreach ($rapats as $rapat)
+                        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                {{-- <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="images"
+                                    width="100"> --}}
+                                {{-- <div class="pic">
+                                    <img src="{{ url('storage/' . $item->foto) }}" alt="gambar" class="img-fluid"> --}}
+
+                                {{-- <img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
+                                        class="img-fluid" alt=""> --}}
+                                {{-- </div> --}}
+                                {{--
+                                <div class="member-info">
+                                    <h4>
+                                        <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop{{ $item->id }}">{{ $item->judul }}</a>
+                                    </h4>
+                                    <hr>
+                                    <p>{{ $item->description }}</p>
+                                </div> --}}
+
+
+                                <a href="#" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop{{ $rapat->id }}">
+                                    <div class="card border-0" style="width: 18rem;">
+                                        <img src="{{ url('storage/' . $rapat->foto) }}" alt="gambar"
+                                            class="img-fluid" style="height: 150px !important; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h4 class="text-center">{{ $rapat->hasil_rapat }}</h4>
+                                            {{-- <p class="card-text">Sed semper eros aliquam nulla vulputate
+                                                egestas.
+                                                Suspendisse porttitor velit felis. </p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a> --}}
+                                        </div>
+                                    </div>
+
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="staticBackdrop{{ $rapat->id }}" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content mt-5">
+                                    <div class="modal-header">
+                                        <p class="modal-title" id="exampleModalLabel">
+                                            <b> Post : </b>{{ $rapat->tanggal_post }}
+                                        </p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container p-2">
+                                            <div class="d-flex justify-content-center">
+                                                <div class="col-10">
+                                                    <div class="card" style="width: 24rem;">
+                                                        {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
+                                                        <img src="{{ url('storage/' . $rapat->foto) }}"
+                                                            alt="gambar" class="card-img-top"
+                                                            style="height: 195px !important; object-fit: cover;">
+                                                        <div class="card-body">
+                                                            <h4 class="text-center">{{ $rapat->judul }}
+                                                            </h4>
+                                                            <p style="text-align: justify;">{{ $item->description }}
                                                             </p>
                                                         </div>
                                                     </div>
@@ -362,7 +450,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
                         <div class="member d-flex align-items-start">
                             <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-4.jpg') }}"
@@ -416,7 +503,6 @@
                         alias
                         ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
-
                 <div class="faq-list">
                     <ul>
                         <li data-aos="fade-up" data-aos-delay="100">
@@ -431,7 +517,6 @@
                                 </p>
                             </div>
                         </li>
-
                         <li data-aos="fade-up" data-aos-delay="200">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-2" class="collapsed">Bagaimana Struktur kepengurusan di
@@ -470,7 +555,6 @@
                                 </p>
                             </div>
                         </li>
-
                         <li data-aos="fade-up" data-aos-delay="500">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-5" class="collapsed">apa saja manfaat bagi saya jika ikut
@@ -498,11 +582,6 @@
 
                 <div class="section-title">
                     <h2>Contact</h2>
-                    {{-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum
-                        quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit
-                        alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> --}}
                 </div>
 
                 <div class="row">
@@ -650,8 +729,9 @@
                 <!-- All the links in the footer should remain intact. -->
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-                Development by <a href="https://www.linkedin.com/in/ahmad-hidayat-a6120b220/">Ahmad Hidayat</a>
+                {{-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ --}}
+                Development by <a href="https://www.linkedin.com/in/ahmad-hidayat-a6120b220/">Ahmad Hidayat</a> <br>
+                {{-- Design by <a href=" https://bootstrapmade.com/license/">bootstrap</a> --}}
             </div>
         </div>
     </footer><!-- End Footer -->

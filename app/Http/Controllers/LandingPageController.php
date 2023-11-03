@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Rapat;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -12,7 +13,7 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $data = Blog::paginate(4);
+        $data = Blog::latest()->paginate(3);
         // dd($data);
         return view('userGuest.index', ['data' => $data]);
     }
@@ -20,11 +21,11 @@ class LandingPageController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function detail_anggota()
+    public function rapat()
     {
-        $data = Blog::paginate(4);
-        // dd($data);
-        return view('userGuest.detail_pengurus', ['data' => $data]);
+        $rapats = Rapat::latest()->paginate(3);
+        // dd($rapat);
+        return view('userGuest.index', compact('rapats'));
     }
 
     /**
