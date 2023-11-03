@@ -22,7 +22,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/admin/blog">
-                <span class="menu-title">Blog</span>
+                <span class="menu-title">Artikel</span>
                 <i class="mdi mdi-crosshairs-gps menu-icon"></i>
             </a>
         </li>

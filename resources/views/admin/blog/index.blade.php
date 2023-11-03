@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between mt-1 p-3">
         <button class="btn btn-primary mt-3" type="button" data-bs-toggle="modal" data-bs-target="#addNew">
             <i class="mdi mdi-library-plus"></i>
-            tambah blog baru</button>
+            tambah Artikel baru</button>
     </div>
     <div class="table mt-2 p-3 table-responsive">
         <table class="table table-bordered table-striped" id="table-blog">
@@ -54,7 +54,7 @@
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="exampleModalLabel"> <i class="mdi mdi-table-edit"></i>
                                         Edit
-                                        Data Blog</h1>
+                                        Data Artikel</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>

@@ -12,7 +12,7 @@ class LandingPageController extends Controller
      */
     public function index()
     {
-        $data = Blog::paginate(2);
+        $data = Blog::paginate(4);
         // dd($data);
         return view('userGuest.index', ['data' => $data]);
     }
@@ -20,9 +20,11 @@ class LandingPageController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function detail_anggota()
     {
-        //
+        $data = Blog::paginate(4);
+        // dd($data);
+        return view('userGuest.detail_pengurus', ['data' => $data]);
     }
 
     /**

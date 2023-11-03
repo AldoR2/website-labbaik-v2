@@ -24,6 +24,7 @@ use App\Http\Controllers\LandingPageController;
 */
 
 Route::get('/',  [LandingPageController::class, 'index']);
+Route::get('/detail-anggota',  [LandingPageController::class, 'detail_anggota']);
 
 // Route::get('/cek', [LandingPageController::class, 'index']);
 Route::prefix('admin')->group(function () {
