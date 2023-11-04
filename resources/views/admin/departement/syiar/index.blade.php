@@ -143,7 +143,8 @@
     <div class="modal-dialog">
         <div class="modal-content" style="background-color: white">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="mdi mdi-library-plus"></i> Tambah Blog
+                <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="mdi mdi-library-plus"></i> Tambah
+                    Anggota
                     Baru
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -169,7 +170,7 @@
                     <div class="mb-3">
                         <label for="departement" class="mb-1">Jabatan</label>
                         <input type="text" class="form-control" id="departement" name="departement"
-                            placeholder="input departement ">
+                            placeholder="input jabatan ">
                     </div>
                     <div class="mb-3">
                         <label for="moto" class="mb-1">Moto</label>

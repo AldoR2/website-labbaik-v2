@@ -33,7 +33,7 @@ class blogController extends Controller
         $data = $request->all();
         $data['foto'] = $request->file('foto')->store('blog', 'public');
         Blog::create($data);
-        return redirect('/admin/blog');
+        return redirect('/admin');
     }
 
     /**
@@ -64,7 +64,7 @@ class blogController extends Controller
             unset($data['foto']);
         }
         Blog::findOrFail($id)->update($data);
-        return redirect('/admin/blog');
+        return redirect('/admin');
     }
 
     /**
@@ -73,6 +73,6 @@ class blogController extends Controller
     public function destroy($id)
     {
         Blog::findOrFail($id)->delete();
-        return  redirect('/admin/blog');
+        return  redirect('/admin');
     }
 }

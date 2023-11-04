@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>UKM LABBAIK</title>
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo_LABAIK.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_LABAIK.png') }}">
     <!-- Favicons -->
-    <link href="{{ URL::asset('user/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ URL::asset('users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('user/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -16,16 +17,16 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ URL::asset('users/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="{{ URL::asset('users/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/css/style.css') }}" rel="stylesheet">
     <!-- =======================================================
   * Template Name: Arsha
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -41,78 +42,157 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Struktur Anggota UKM Labbaik</h2>
+                    <h2>Departement Kominfo</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Aji</h4>
-                                <span>Ketum</span>
-                                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    @foreach ($kominfo as $k)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $k->foto) }}" {{-- class="img-fluid" --}}
+                                        alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $k->nama }}</h4>
+                                    <span>{{ $k->departement }}</span>
+                                    <p>{{ $k->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Fitri</h4>
-                                <span>wakil</span>
-                                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    @endforeach
+                </div>
+                <div class="section-title mt-5">
+                    <h2>Departement Syiar</h2>
+                </div>
+                <div class="row">
+                    @foreach ($syiar as $s)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $s->foto) }}" {{-- class="img-fluid" --}}
+                                        alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $s->nama }}</h4>
+                                    <span>{{ $s->departement }}</span>
+                                    <p>{{ $s->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Sintyowati</h4>
-                                <span>Sekretaris</span>
-                                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i></a>
+                    @endforeach
+                </div>
+                <div class="row justify-content-center">
+                    @foreach ($syiarr as $ss)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $ss->foto) }}" {{-- class="img-fluid" --}}
+                                        alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $ss->nama }}</h4>
+                                    <span>{{ $ss->departement }}</span>
+                                    <p>{{ $ss->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Aprillia</h4>
-                                <span>Bendahara</span>
-                                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    @endforeach
+                </div>
+                <div class="section-title mt-5">
+                    <h2>Departement Kemuslimahan</h2>
+                </div>
+                <div class="row">
+                    @foreach ($kemuslimahan as $km)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $km->foto) }}"
+                                        {{-- class="img-fluid" --}} alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $km->nama }}</h4>
+                                    <span>{{ $km->departement }}</span>
+                                    <p>{{ $km->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    @endforeach
+                </div>
+                <div class="section-title mt-5">
+                    <h2>Departement PSDM</h2>
+                </div>
+                <div class="row">
+                    @foreach ($psdm as $p)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $p->foto) }}" {{-- class="img-fluid" --}}
+                                        alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $p->nama }}</h4>
+                                    <span>{{ $p->departement }}</span>
+                                    <p>{{ $p->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="section-title mt-5">
+                    <h2>Departement KWU</h2>
+                </div>
+                <div class="row">
+                    @foreach ($kwu as $kw)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $kw->foto) }}"
+                                        {{-- class="img-fluid" --}} alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $kw->nama }}</h4>
+                                    <span>{{ $kw->departement }}</span>
+                                    <p>{{ $kw->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>

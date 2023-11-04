@@ -17,8 +17,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot(\Illuminate\Http\Request $request): void
     {
-        //
+        // if (!empty(env('APP_URL')) && $request->server->has('http://localhost')) {
+        //     $this->app['url']->forceRootUrl(env('APP_URL'));
+        // }
     }
 }

@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>UKM LABBAIK</title>
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo_LABAIK.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_LABAIK.png') }}">
     <!-- Favicons -->
-    <link href="{{ URL::asset('user/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ URL::asset('users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('/user/assets/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -16,15 +17,16 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="{{ URL::asset('users/assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('users/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
     <!-- Template Main CSS File -->
-    <link href="{{ URL::asset('users/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/users/assets/css/style.css') }}" rel="stylesheet">
     <!-- =======================================================
   * Template Name: Arsha
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -78,7 +80,7 @@
         }
 
         .modal-content {
-            margin-top: 500px !important;
+            margin-top: 700px !important;
         }
     </style>
 </head>
@@ -240,7 +242,7 @@
                         <div class="modal fade" id="staticBackdrop{{ $item->id }}" data-bs-backdrop="static"
                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                             aria-hidden="true">
-                            <div class="modal-dialog">
+                            <div class="modal-dialog ">
                                 <div class="modal-content mt-5">
                                     <div class="modal-header">
                                         <p class="modal-title" id="exampleModalLabel">
@@ -249,24 +251,24 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body text-center">
                                         <div class="container p-2">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="card" style="width: 24rem;">
-                                                        {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
-                                                        <img src="{{ url('storage/' . $item->foto) }}" alt="gambar"
-                                                            class="card-img-top"
-                                                            style="height: 195px !important; object-fit: cover;">
-                                                        <div class="card-body">
-                                                            <h4 class="text-center">{{ $item->judul }}
-                                                            </h4>
-                                                            <p style="text-align: justify;">{{ $item->description }}
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                            {{-- <div class="d-flex justify-content-center">
+                                                <div class="col-10 justify-content-center"> --}}
+                                            <div class="card" style="width: 18rem; margin: 0 auto;">
+                                                {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
+                                                <img src="{{ url('storage/' . $item->foto) }}" alt="gambar"
+                                                    class="card-img-top"
+                                                    style="height: 195px !important; object-fit: cover;">
+                                                <div class="card-body">
+                                                    <h4 class="text-center">{{ $item->judul }}
+                                                    </h4>
+                                                    <p style="text-align: justify;">{{ $item->description }}
+                                                    </p>
                                                 </div>
                                             </div>
+                                            {{-- </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -314,44 +316,43 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
+                                    <div class="modal-body text-center">
                                         <div class="container p-2">
-                                            <div class="d-flex justify-content-center">
-                                                <div class="col-10">
-                                                    <div class="card" style="width: 24rem;">
-                                                        {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
-                                                        <img src="{{ url('storage/' . $rapat->foto) }}"
-                                                            alt="gambar" class="card-img-top"
-                                                            style="height: 195px !important; object-fit: cover;">
-                                                        <div class="card-body">
-                                                            <h4 class="text-center">{{ $rapat->agenda_rapat }}
-                                                            </h4>
-                                                            <p style="text-align: justify;"> <b>Note : </b>
-                                                                <br> {{ $rapat->note }} !!
-                                                            </p>
-                                                            <p style="text-align: justify;"> <b>Waktu : </b>
-                                                                <br>{{ $rapat->tanggal_rapat }}
-                                                            </p>
-                                                            <p style="text-align: justify;"> <b>Tempat : </b>
-                                                                <br>{{ $rapat->tempat_rapat }}
-                                                            </p>
-                                                            <p style="text-align: justify;"> <b>Hadir : </b>
-                                                                <br>{{ $rapat->jumlah_yang_hadir }} orang
-                                                            </p>
-                                                            <p style="text-align: justify;"> <b>Tidak Hadir : </b>
-                                                                <br>{{ $rapat->jumlah_yang_tidak_hadir }} orang
-                                                            </p>
-                                                            <p style="text-align: justify;"> <b>Hasil : </b>
-                                                                <br>{{ $rapat->hasil_rapat }}
-                                                            </p>
-                                                        </div>
-                                                    </div>
+                                            {{-- <div class="d-flex align-items-center justify-content-center"> --}}
+                                            {{-- <div class="col-12 col-sm-8 col-md-6 col-lg-4"> --}}
+                                            <div class="card" style="width: 18rem; margin: 0 auto;">
+                                                <img src="{{ url('storage/' . $rapat->foto) }}" alt="gambar"
+                                                    class="card-img-top"
+                                                    style="height: 195px !important; object-fit: cover;">
+                                                <div class="card-body text-center">
+                                                    <h4>{{ $rapat->agenda_rapat }}</h4>
+                                                    <p style="text-align: justify;">
+                                                        <b>Note:</b><br>{{ $rapat->note }} !!
+                                                    </p>
+                                                    <p style="text-align: justify;">
+                                                        <b>Waktu:</b><br>{{ $rapat->tanggal_rapat }}
+                                                    </p>
+                                                    <p style="text-align: justify;">
+                                                        <b>Tempat:</b><br>{{ $rapat->tempat_rapat }}
+                                                    </p>
+                                                    <p style="text-align: justify;">
+                                                        <b>Hadir:</b><br>{{ $rapat->jumlah_yang_hadir }} orang
+                                                    </p>
+                                                    <p style="text-align: justify;"><b>Tidak
+                                                            Hadir:</b><br>{{ $rapat->jumlah_yang_tidak_hadir }}
+                                                        orang</p>
+                                                    <p style="text-align: justify;">
+                                                        <b>Hasil:</b><br>{{ $rapat->hasil_rapat }}
+                                                    </p>
                                                 </div>
                                             </div>
+                                            {{-- </div> --}}
+                                            {{-- </div> --}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     @endforeach
                 </div>
@@ -368,82 +369,53 @@
                 </div>
 
                 <div class="row">
-
-                    <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Aji</h4>
-                                <span>Ketum</span>
-                                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    @foreach ($bph as $b)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $b->foto) }}"
+                                        {{-- class="img-fluid" --}} alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $b->nama }}</h4>
+                                    <span>{{ $b->jabatan }}</span>
+                                    <p>{{ $b->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-1.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Fitri</h4>
-                                <span>wakil</span>
-                                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-3.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Sintyowati</h4>
-                                <span>Sekretaris</span>
-                                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="member d-flex align-items-start">
-                            <div class="pic"><img src="{{ URL::asset('users/assets/img/team/team-3.jpg') }}"
-                                    class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Aprillia</h4>
-                                <span>Bendahara</span>
-                                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
-
+                <div class="row justify-content-center">
+                    @foreach ($bphAkhir as $bp)
+                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="member d-flex align-items-start">
+                                <div class=""><img src="{{ url('storage/' . $bp->foto) }}"
+                                        {{-- class="img-fluid" --}} alt=""
+                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
+                                </div>
+                                <div class="member-info">
+                                    <h4>{{ $bp->nama }}</h4>
+                                    <span>{{ $bp->jabatan }}</span>
+                                    <p>{{ $bp->moto }}</p>
+                                    <div class="social">
+                                        <a href=""><i class="ri-twitter-fill"></i></a>
+                                        <a href=""><i class="ri-facebook-fill"></i></a>
+                                        <a href=""><i class="ri-instagram-fill"></i></a>
+                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
-            <div class=" mt-5 d-flex justify-content-center align-content-center align-items-center more">
+            <div class=" mt-3 d-flex justify-content-center align-content-center align-items-center more">
                 <a href="/detail-anggota" class="btn btn-outline-info col-lg-2 ">Anggota Lain</a>
             </div>
 
@@ -681,11 +653,17 @@
                         <h4>Sosial Media</h4>
                         <p>Yuk sobat polije join dan subscribe media sosial labbaik</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
+                            {{-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> --}}
+                            <a href="https://instagram.com/ukmlabaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
+                                class="instagram"><i class="bx bxl-instagram"></i></a>
+                            {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
+                            {{-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
+                            <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" target="_blank"
+                                class="youtube">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+
                         </div>
                     </div>
 

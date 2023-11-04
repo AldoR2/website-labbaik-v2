@@ -30,9 +30,9 @@ Route::get('/detail-anggota',  [LandingPageController::class, 'detail_anggota'])
 
 // Route::get('/cek', [LandingPageController::class, 'index']);
 Route::prefix('admin')->group(function () {
-    Route::get('/', [dashboardController::class, 'index']);
+    // Route::get('/', [dashboardController::class, 'index']);
     // blog
-    Route::get('/blog', [blogController::class, 'index']);
+    Route::get('/', [blogController::class, 'index']);
     ROute::post('/saveBlog', [blogController::class, 'store']);
     Route::put('/blog/{id}', [blogController::class, 'update']);
     Route::delete('/blog/{id}', [blogController::class, 'destroy']);

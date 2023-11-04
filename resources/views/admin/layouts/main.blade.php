@@ -2,22 +2,23 @@
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>UKM LABBAIK</title>
 
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/logo_LABAIK.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo_LABAIK.png') }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/vendors/css/vendor.bundle.base.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="{{ URL::asset('style/style.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('style/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.min.css') }}">
 
     {{-- <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
@@ -41,7 +42,7 @@
                         style="object-fit: cover" /> --}}
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="index.html">
-                    <img src="{{ URL::asset('assets/images/Logo_LABAIK.png') }}" alt="" width="100px"
+                    <img src="{{ asset('assets/images/Logo_LABAIK.png') }}" alt="" width="100px"
                         class="py-2" />
 
                     {{-- <img
@@ -618,20 +619,20 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script> --}}
 
-    <script src="{{ URL::asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
+    <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>
     <!-- endinject -->
     <!-- Plugin js for this page -->
-    <script src="{{ URL::asset('assets/vendors/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/vendors/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.cookie.js') }}" type="text/javascript"></script>
     <!-- End plugin js for this page -->
     <!-- inject:js -->
-    <script src="{{ URL::asset('assets/js/off-canvas.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/misc.js') }}"></script>
+    <script src="{{ asset('assets/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('assets/js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('assets/js/misc.js') }}"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="{{ URL::asset('assets/js/dashboard.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/todolist.js') }}"></script>
+    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script src="{{ asset('assets/js/todolist.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
