@@ -246,11 +246,17 @@
                         <h4>Sosial Media</h4>
                         <p>Yuk sobat polije join dan subscribe media sosial labbaik</p>
                         <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
                             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
+                            <a href="https://instagram.com/ukmlabaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
+                                class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" target="_blank"
+                                class="youtube">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
                         </div>
                     </div>
 

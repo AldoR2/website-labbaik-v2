@@ -22,8 +22,8 @@ class LandingPageController extends Controller
         $data = Blog::latest()->paginate(3);
         $rapats = Rapat::latest()->paginate(3);
         // dd($data);
-        $bph = Bph::paginate(4);
-        $bphAkhir = Bph::where('jabatan', 'wakil bendahara')->get();
+        $bph = Bph::where('angkatan', '2024')->paginate(4);
+        $bphAkhir = Bph::where('jabatan', 'wakil bendahara')->where('angkatan', '2024')->get();
         return view('userGuest.index', ['data' => $data, 'rapats' => $rapats, 'bph' => $bph, 'bphAkhir' => $bphAkhir]);
     }
 
@@ -34,12 +34,12 @@ class LandingPageController extends Controller
     {
         // $rapats = Rapat::latest()->paginate(3);
         // dd($rapats);
-        $kominfo = Kominfo::all();
-        $syiar = Syiar::paginate(2);
-        $syiarr = Syiar::where('id', 4)->get();
-        $kemuslimahan = Kemuslimahan::all();
-        $psdm = psdm::all();
-        $kwu = kwu::all();
+        $kominfo = Kominfo::where('angkatan', '2024')->get();
+        $syiar = Syiar::where('angkatan', '2024')->paginate(2);
+        $syiarr = Syiar::where('id', 4)->where('angkatan', '2024')->get();
+        $kemuslimahan = Kemuslimahan::where('angkatan', '2024')->get();
+        $psdm = psdm::where('angkatan', '2024')->get();
+        $kwu = kwu::where('angkatan', '2024')->get();
         return view('userGuest.detail_pengurus', [
             'kominfo' => $kominfo, 'syiar' => $syiar, 'syiarr' => $syiarr,
             'kemuslimahan' => $kemuslimahan, 'psdm' => $psdm, 'kwu' => $kwu

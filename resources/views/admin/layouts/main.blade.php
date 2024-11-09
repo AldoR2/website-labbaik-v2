@@ -236,7 +236,9 @@
             @include('admin.partials.sidebar')
             <!-- partial -->
             <div class="main-panel content-wrapper">
-                @yield('content')
+                <div class="card mt-3">
+                    @yield('content')
+                </div>
                 {{-- <div class="content-wrapper">
                     <div class="page-header">
                         <h3 class="page-title">

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>UKM LABBAIK</title>
+    <title>UKM LABAIK</title>
     <link rel="shortcut icon" href="{{ asset('/assets/images/logo_LABAIK.png') }}">
     <!-- Favicons -->
     <link href="{{ asset('/user/assets/img/favicon.png') }}" rel="icon">
@@ -90,7 +90,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <h1 class="logo me-auto logo-labbaik" style="color: white; font-weight: bold;">UKM Labbaik
+            <h1 class="logo me-auto logo-labbaik" style="color: white; font-weight: bold;">UKM Labaik
             </h1>
             <nav id="navbar" class="navbar">
                 <ul>
@@ -125,8 +125,8 @@
             <div class="row text-center">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                     data-aos="fade-up" data-aos-delay="200">
-                    <h1>Salam Labbaik !!!</h1>
-                    <h2>Bersama Labbaik ayo lebih baik...</h2>
+                    <h1>Salam Labaik !!!</h1>
+                    <h2>Bersama Labaik ayo lebih baik...</h2>
                     <div class="d-flex justify-content-center ">
                         <a href="/login" class="btn-get-started scrollto">Get Started</a>
                         <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" class="glightbox btn-watch-video"><i
@@ -154,7 +154,7 @@
                             UKM Labaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
                             satu-satunya UKM Kerohanian Islam di Kampus Politeknik Negeri Jember. UKM Labaik lahir atas
                             sebuah keinginan yang mulia. Sebuah niat untuk membentuk ladang aktualisasi keislaman.
-                            Banyak manfaat yang dapat kita ambil jika bergabung dengan ukm Labbaik diantaranya :
+                            Banyak manfaat yang dapat kita ambil jika bergabung dengan ukm Labaik diantaranya :
                         </p>
 
                         <ul>
@@ -167,7 +167,7 @@
                 <div class="section-title content">
                     <a href="#"
                         class="btn-learn-more col-lg-3 justify-content-end align-content-end align-items-end">Join
-                        Labbaik yuk</a>
+                        Labaik yuk</a>
                 </div>
             </div>
         </section><!-- End About Us Section -->
@@ -255,7 +255,7 @@
                                         <div class="container p-2">
                                             {{-- <div class="d-flex justify-content-center">
                                                 <div class="col-10 justify-content-center"> --}}
-                                            <div class="card" style="width: 18rem; margin: 0 auto;">
+                                            <div class="card" style="width: 24rem; margin: 0 auto;">
                                                 {{-- <img src="images/card.png" class="card-img-top" alt="..."> --}}
                                                 <img src="{{ url('storage/' . $item->foto) }}" alt="gambar"
                                                     class="card-img-top"
@@ -320,7 +320,7 @@
                                         <div class="container p-2">
                                             {{-- <div class="d-flex align-items-center justify-content-center"> --}}
                                             {{-- <div class="col-12 col-sm-8 col-md-6 col-lg-4"> --}}
-                                            <div class="card" style="width: 18rem; margin: 0 auto;">
+                                            <div class="card" style="width: 24rem; margin: 0 auto;">
                                                 <img src="{{ url('storage/' . $rapat->foto) }}" alt="gambar"
                                                     class="card-img-top"
                                                     style="height: 195px !important; object-fit: cover;">
@@ -365,7 +365,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Struktur Anggota UKM Labbaik</h2>
+                    <h2>Struktur Anggota UKM Labaik</h2>
                 </div>
 
                 <div class="row">
@@ -451,7 +451,7 @@
                     <ul>
                         <li data-aos="fade-up" data-aos-delay="100">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                                data-bs-target="#faq-list-1">apa itu UKM Labbaik ? <i
+                                data-bs-target="#faq-list-1">apa itu UKM Labaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
@@ -464,7 +464,7 @@
                         <li data-aos="fade-up" data-aos-delay="200">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-2" class="collapsed">Bagaimana Struktur kepengurusan di
-                                Labbaik ? <i class="bx bx-chevron-down icon-show"></i><i
+                                Labaik ? <i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                 <p>
@@ -476,7 +476,7 @@
 
                         <li data-aos="fade-up" data-aos-delay="300">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-3" class="collapsed">Apa saja kegiatan labbaik ? <i
+                                data-bs-target="#faq-list-3" class="collapsed">Apa saja kegiatan labaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
@@ -489,27 +489,27 @@
 
                         <li data-aos="fade-up" data-aos-delay="400">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-4" class="collapsed">Bagaimana cara join labbaik ? <i
+                                data-bs-target="#faq-list-4" class="collapsed">Bagaimana cara join labaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     sangat mudah kalian bisa join jadi staf muda dulu lalu next step jadi pengurus ukm
-                                    labbaik
+                                    labaik
                                 </p>
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="500">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-5" class="collapsed">apa saja manfaat bagi saya jika ikut
-                                labbaik ? <i class="bx bx-chevron-down icon-show"></i><i
+                                labaik ? <i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     wah pastinya banyak banget ya guys, kamu bakal punya saudara baru, wawasan keislaman
                                     semakin bertambah, punya circle temen yang bisa saling mengajak dalam hal kebaikan,
                                     softskill dan hardskill tentunya juga semakin terasah di dalam organisasi ini.
-                                    <b>jadi tunggu apa lagi yuk join UKM Labbaik</b>
+                                    <b>jadi tunggu apa lagi yuk join UKM Labaik</b>
                                 </p>
                             </div>
                         </li>
@@ -617,7 +617,7 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>UKM Labbaik</h3>
+                        <h3>UKM Labaik</h3>
                         <p>
                             Jl. Mastrip <br>
                             POBOX 164 Sumbersari<br>
@@ -651,7 +651,7 @@
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Sosial Media</h4>
-                        <p>Yuk sobat polije join dan subscribe media sosial labbaik</p>
+                        <p>Yuk sobat polije join dan subscribe media sosial labaik</p>
                         <div class="social-links mt-3">
                             {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
                             {{-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> --}}
@@ -673,7 +673,7 @@
 
         <div class="container footer-bottom clearfix mt-5 p-0">
             <div class="copyright">
-                &copy; Copyright <strong><span>UKM Labbaik</span></strong>
+                &copy; Copyright <strong><span>UKM Labaik</span></strong>
                 <p class="text-center align-content-center align-items-center justify-content-center">source <a
                         href="https://getbootstrap.com/" target="_blank">bootstrap</a></p>
             </div>

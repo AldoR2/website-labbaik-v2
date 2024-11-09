@@ -13,6 +13,7 @@
                     <th>Nama</th>
                     <th>Tanggal Lahir</th>
                     <th>Jabatan</th>
+                    <th>Angkatan</th>
                     <th>Foto</th>
                     <th class="deskripsi">Moto</th>
                     <th>Action</th>
@@ -25,6 +26,7 @@
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->tanggal_lahir }}</td>
                         <td>{{ $item->departement }}</td>
+                        <td>{{ $item->angkatan }}</td>
                         <td><img src="{{ url('storage/' . $item->foto) }}"
                                 style="width: 50px; height: 50px; object-fit: cover;" alt="gambar" class="rounded-circle">
                         </td>
@@ -76,9 +78,14 @@
                                                 name="tanggal_lahir" value="{{ $item->tanggal_lahir }}">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="departement" class="mb-1">Departement</label>
+                                            <label for="departement" class="mb-1">Jabatan</label>
                                             <input type="text" class="form-control" id="departement" name="departement"
                                                 value="{{ $item->departement }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="angkatan" class="mb-1">Angkatan</label>
+                                            <input type="text" class="form-control" id="angkatan" name="angkatan"
+                                                value="{{ $item->angkatan }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="foto" class="mb-1">Foto</label>
@@ -170,6 +177,11 @@
                     <div class="mb-3">
                         <label for="departement" class="mb-1">Jabatan</label>
                         <input type="text" class="form-control" id="departement" name="departement"
+                            placeholder="input jabatan ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="angkatan" class="mb-1">Angakatan</label>
+                        <input type="text" class="form-control" id="angkatan" name="angkatan"
                             placeholder="input jabatan ">
                     </div>
                     <div class="mb-3">

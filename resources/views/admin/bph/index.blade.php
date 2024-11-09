@@ -13,6 +13,7 @@
                     <th>Nama</th>
                     <th>Tanggal Lahir</th>
                     <th>Jabatan</th>
+                    <th>Angkatan</th>
                     <th>Foto</th>
                     <th class="deskripsi">Moto</th>
                     <th>Action</th>
@@ -25,6 +26,7 @@
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->tanggal_lahir }}</td>
                         <td>{{ $item->jabatan }}</td>
+                        <td>{{ $item->angkatan }}</td>
                         <td><img src="{{ url('storage/' . $item->foto) }}"
                                 style="width: 50px; height: 50px; object-fit: cover;" alt="gambar" class="rounded-circle">
                         </td>
@@ -34,9 +36,6 @@
                                 <a href="" class="btn btn-warning" style="color: white;" data-bs-toggle="modal"
                                     data-bs-target="#edit{{ $item->id }}">
                                     <i class="mdi mdi-table-edit"></i> Edit</a>
-
-                                {{-- <button type="button" data-bs-toggle="modal" data-bs-target="#edit{{ $item->id }}"
-                                    class="btn btn-warning">Edit</button> --}}
                                 <form action="/admin/bph/{{ $item->id }}" method="post" class="delete-form m-0">
                                     @method('DELETE')
                                     @csrf
@@ -79,6 +78,11 @@
                                             <label for="jabatan" class="mb-1">Jabatan</label>
                                             <input type="text" class="form-control" id="jabatan" name="jabatan"
                                                 value="{{ $item->jabatan }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="angkatan" class="mb-1">Angkatan</label>
+                                            <input type="text" class="form-control" id="angkatan" name="angkatan"
+                                                value="{{ $item->angkatan }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="foto" class="mb-1">Foto</label>
@@ -170,6 +174,11 @@
                         <label for="jabatan" class="mb-1">Jabatan</label>
                         <input type="text" class="form-control" id="jabatan" name="jabatan"
                             placeholder="input jabatan ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="angkatan" class="mb-1">Angkatan</label>
+                        <input type="text" class="form-control" id="angkatan" name="angkatan"
+                            placeholder="input angkatan ">
                     </div>
                     <div class="mb-3">
                         <label for="moto" class="mb-1">Moto</label>
