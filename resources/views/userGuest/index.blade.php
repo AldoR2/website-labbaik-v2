@@ -5,8 +5,8 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>UKM LABAIK</title>
-    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_LABAIK.png') }}">
+    <title>UKM LABBAIK</title>
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_labbaik.png') }}">
     <!-- Favicons -->
     <link href="{{ asset('/user/assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -90,7 +90,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <h1 class="logo me-auto logo-labbaik" style="color: white; font-weight: bold;">UKM Labaik
+            <h1 class="logo me-auto logo-labbaik" style="color: white; font-weight: bold;">UKM Labbaik
             </h1>
             <nav id="navbar" class="navbar">
                 <ul>
@@ -125,8 +125,8 @@
             <div class="row text-center">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
                     data-aos="fade-up" data-aos-delay="200">
-                    <h1>Salam Labaik !!!</h1>
-                    <h2>Bersama Labaik ayo lebih baik...</h2>
+                    <h1>Salam labbaik !!!</h1>
+                    <h2>Bersama labbaik ayo lebih baik...</h2>
                     <div class="d-flex justify-content-center ">
                         <a href="/login" class="btn-get-started scrollto">Login</a>
                         <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" class="glightbox btn-watch-video"><i
@@ -151,10 +151,10 @@
                 <div class="row content">
                     <div class="col-lg-12">
                         <p>
-                            UKM Labaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
-                            satu-satunya UKM Kerohanian Islam di Kampus Politeknik Negeri Jember. UKM Labaik lahir atas
+                            UKM labbaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
+                            satu-satunya UKM Kerohanian Islam di Kampus Politeknik Negeri Jember. UKM labbaik lahir atas
                             sebuah keinginan yang mulia. Sebuah niat untuk membentuk ladang aktualisasi keislaman.
-                            Banyak manfaat yang dapat kita ambil jika bergabung dengan ukm Labaik diantaranya :
+                            Banyak manfaat yang dapat kita ambil jika bergabung dengan ukm labbaik diantaranya :
                         </p>
 
                         <ul>
@@ -167,7 +167,7 @@
                 <div class="section-title content">
                     <a href="#"
                         class="btn-learn-more col-lg-3 justify-content-end align-content-end align-items-end">Join
-                        Labaik yuk</a>
+                        labbaik yuk</a>
                 </div>
             </div>
         </section><!-- End About Us Section -->
@@ -177,7 +177,7 @@
 
                 <div class="section-title">
                     <h2>Visi dan Misi</h2>
-                    <p>Menjadikan UKM LABAIK sebagai wadah bagi mahasiswa guna memperdalam ilmu agama dan juga mencetak
+                    <p>Menjadikan UKM labbaik sebagai wadah bagi mahasiswa guna memperdalam ilmu agama dan juga mencetak
                         mahasiswa yang berakhlak mulia, jujur, serta bertanggung jawab yang diridhoi oleh Allah
                         subhanahu wata'ala
                     </p>
@@ -365,7 +365,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Struktur Anggota UKM Labaik</h2>
+                    <h2>Struktur Anggota UKM labbaik</h2>
                 </div>
 
                 <div class="row">
@@ -451,12 +451,12 @@
                     <ul>
                         <li data-aos="fade-up" data-aos-delay="100">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                                data-bs-target="#faq-list-1">apa itu UKM Labaik ? <i
+                                data-bs-target="#faq-list-1">apa itu UKM labbaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                                 <p>
-                                    UKM Labaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
+                                    UKM labbaik merupakan Lembaga Dakwah Kampus atau Unit Kerohanian Islam yang menjadi
                                     satu-satunya UKM Kerohanian Islam di Kampus Politeknik Negeri Jember
                                 </p>
                             </div>
@@ -464,7 +464,7 @@
                         <li data-aos="fade-up" data-aos-delay="200">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-2" class="collapsed">Bagaimana Struktur kepengurusan di
-                                Labaik ? <i class="bx bx-chevron-down icon-show"></i><i
+                                labbaik ? <i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                                 <p>
@@ -476,7 +476,7 @@
 
                         <li data-aos="fade-up" data-aos-delay="300">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-3" class="collapsed">Apa saja kegiatan labaik ? <i
+                                data-bs-target="#faq-list-3" class="collapsed">Apa saja kegiatan labbaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
@@ -489,27 +489,27 @@
 
                         <li data-aos="fade-up" data-aos-delay="400">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
-                                data-bs-target="#faq-list-4" class="collapsed">Bagaimana cara join labaik ? <i
+                                data-bs-target="#faq-list-4" class="collapsed">Bagaimana cara join labbaik ? <i
                                     class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     sangat mudah kalian bisa join jadi staf muda dulu lalu next step jadi pengurus ukm
-                                    labaik
+                                    labbaik
                                 </p>
                             </div>
                         </li>
                         <li data-aos="fade-up" data-aos-delay="500">
                             <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse"
                                 data-bs-target="#faq-list-5" class="collapsed">apa saja manfaat bagi saya jika ikut
-                                labaik ? <i class="bx bx-chevron-down icon-show"></i><i
+                                labbaik ? <i class="bx bx-chevron-down icon-show"></i><i
                                     class="bx bx-chevron-up icon-close"></i></a>
                             <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                                 <p>
                                     wah pastinya banyak banget ya guys, kamu bakal punya saudara baru, wawasan keislaman
                                     semakin bertambah, punya circle temen yang bisa saling mengajak dalam hal kebaikan,
                                     softskill dan hardskill tentunya juga semakin terasah di dalam organisasi ini.
-                                    <b>jadi tunggu apa lagi yuk join UKM Labaik</b>
+                                    <b>jadi tunggu apa lagi yuk join UKM labbaik</b>
                                 </p>
                             </div>
                         </li>
@@ -541,7 +541,7 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p> labaikpolije01@gmail.com</p>
+                                <p> labbaikpolije01@gmail.com</p>
                             </div>
 
                             <div class="phone">
@@ -617,13 +617,13 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>UKM Labaik</h3>
+                        <h3>UKM labbaik</h3>
                         <p>
                             Jl. Mastrip <br>
                             POBOX 164 Sumbersari<br>
                             Jember<br><br>
                             <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> labaikpolije01@gmail.com<br>
+                            <strong>Email:</strong> labbaikpolije01@gmail.com<br>
                         </p>
                     </div>
 
@@ -651,11 +651,11 @@
 
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Sosial Media</h4>
-                        <p>Yuk sobat polije join dan subscribe media sosial labaik</p>
+                        <p>Yuk sobat polije join dan subscribe media sosial labbaik</p>
                         <div class="social-links mt-3">
                             {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
                             {{-- <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> --}}
-                            <a href="https://instagram.com/ukmlabaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
+                            <a href="https://instagram.com/ukmlabbaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
                                 class="instagram"><i class="bx bxl-instagram"></i></a>
                             {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> --}}
                             {{-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
@@ -673,7 +673,7 @@
 
         <div class="container footer-bottom clearfix mt-5 p-0">
             <div class="copyright">
-                &copy; Copyright <strong><span>UKM Labaik</span></strong>
+                &copy; Copyright <strong><span>UKM labbaik</span></strong>
                 <p class="text-center align-content-center align-items-center justify-content-center">source <a
                         href="https://getbootstrap.com/" target="_blank">bootstrap</a></p>
             </div>

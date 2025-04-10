@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>UKM LABBAIK</title>
-    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_LABAIK.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_labbaik.png') }}">
     <!-- Favicons -->
     <link href="{{ asset('user/assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -216,7 +216,7 @@
                             POBOX 164 Sumbersari<br>
                             Jember<br><br>
                             <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> labaikpolije01@gmail.com<br>
+                            <strong>Email:</strong> labbaikpolije01@gmail.com<br>
                         </p>
                     </div>
 
@@ -251,7 +251,7 @@
                             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
                             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
-                            <a href="https://instagram.com/ukmlabaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
+                            <a href="https://instagram.com/ukmlabbaik?igshid=MTUxeHM1bXg1dHhsdw==" target="_blank"
                                 class="instagram"><i class="bx bxl-instagram"></i></a>
                             <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" target="_blank"
                                 class="youtube">

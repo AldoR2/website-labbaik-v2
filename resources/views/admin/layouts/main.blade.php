@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>UKM LABBAIK</title>
 
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo_LABAIK.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo_labbaik.png') }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -38,11 +38,11 @@
                 <a class="brand-logo navbar-brand" href="">
                     <h2 class="fw-bold" style="color: black; font-weight: bold; font-family: Pacifico">Labbaik</h2>
                     {{-- <img
-                        src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" alt="logo"
+                        src="{{ URL::asset('assets/images/logo_labbaik.png') }}" alt="logo"
                         style="object-fit: cover" /> --}}
                 </a>
                 <a class="navbar-brand brand-logo-mini" href="index.html">
-                    <img src="{{ asset('assets/images/Logo_LABAIK.png') }}" alt="" width="100px"
+                    <img src="{{ asset('assets/images/Logo_labbaik.png') }}" alt="" width="100px"
                         class="py-2" />
 
                     {{-- <img
@@ -69,7 +69,7 @@
                         <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="nav-profile-img">
-                                <img src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" alt="image">
+                                <img src="{{ URL::asset('assets/images/logo_labbaik.png') }}" alt="image">
                                 <span class="availability-status online"></span>
                             </div>
                             <div class="nav-profile-text">
