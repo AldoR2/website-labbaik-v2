@@ -13,7 +13,7 @@ use App\Http\Controllers\admin\dashboardController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\BphController;
 use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\RapatsController;
+use App\Http\Controllers\DetailPengurusController;
 
 /*
 |--------------------------------------------------------------------------
@@ -92,3 +92,5 @@ Route::prefix('admin')->group(function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/detail-anggota', [DetailPengurusController::class, 'detailPengurus']);

@@ -12,8 +12,8 @@ class KwuController extends Controller
      */
     public function index()
     {
-        $data = kwu::all();
-        return view('admin.departement.kwu.index', compact('data'));
+        $kwu = kwu::all();
+        return view('admin.departement.kwu.index', compact('kwu'));
     }
 
     /**
@@ -28,22 +28,22 @@ class KwuController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('kwu', 'public');
-        kwu::create($data);
-        return redirect('/admin/kwu');
+        $kwu = $request->all();
+        $kwu['foto'] = $request->file('foto')->store('kwu', 'public');
+        kwu::create($kwu);
+        return redirect('/admin/kwu')->with('success', 'Data berhasil ditambahkan.');
     }
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('kwu', 'public');
+        $kwu = $request->all();
+        if (!empty($kwu['foto'])) {
+            $kwu['foto'] = $request->file('foto')->store('kwu', 'public');
         } else {
-            unset($data['foto']);
+            unset($kwu['foto']);
         }
-        kwu::findOrFail($id)->update($data);
-        return redirect('/admin/kwu');
+        kwu::findOrFail($id)->update($kwu);
+        return redirect('/admin/kwu')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -52,6 +52,6 @@ class KwuController extends Controller
     public function destroy($id)
     {
         kwu::findOrFail($id)->delete();
-        return  redirect('/admin/kwu');
+        return  redirect('/admin/kwu')->with('success', 'Data berhasil dihapus.');;
     }
 }

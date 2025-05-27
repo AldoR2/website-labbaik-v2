@@ -33,7 +33,7 @@ class rapatController extends Controller
         $data = $request->all();
         $data['foto'] = $request->file('foto')->store('rapat', 'public');
         Rapat::create($data);
-        return redirect('/admin/rapat');
+        return redirect('/admin/rapat')->with('success', 'Data berhasil ditambahkan.');
     }
 
     /**
@@ -64,7 +64,7 @@ class rapatController extends Controller
             unset($data['foto']);
         }
         Rapat::findOrFail($id)->update($data);
-        return redirect('/admin/rapat');
+        return redirect('/admin/rapat')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -73,7 +73,7 @@ class rapatController extends Controller
     public function destroy($id)
     {
         Rapat::findOrFail($id)->delete();
-        return  redirect('/admin/rapat');
+        return  redirect('/admin/rapat')->with('success', 'Data berhasil dihapus.');
     }
 
     // public function rapat()

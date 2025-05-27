@@ -12,8 +12,8 @@ class PsdmController extends Controller
      */
     public function index()
     {
-        $data = psdm::all();
-        return view('admin.departement.psdm.index', compact('data'));
+        $psdm = psdm::all();
+        return view('admin.departement.psdm.index', compact('psdm'));
     }
 
     /**
@@ -28,22 +28,22 @@ class PsdmController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('psdm', 'public');
-        psdm::create($data);
-        return redirect('/admin/psdm');
+        $psdm = $request->all();
+        $psdm['foto'] = $request->file('foto')->store('psdm', 'public');
+        psdm::create($psdm);
+        return redirect('/admin/psdm')->with('success', 'Data berhasil ditambahkan.');
     }
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('psdm', 'public');
+        $psdm = $request->all();
+        if (!empty($psdm['foto'])) {
+            $psdm['foto'] = $request->file('foto')->store('psdm', 'public');
         } else {
-            unset($data['foto']);
+            unset($psdm['foto']);
         }
-        psdm::findOrFail($id)->update($data);
-        return redirect('/admin/psdm');
+        psdm::findOrFail($id)->update($psdm);
+        return redirect('/admin/psdm')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -52,6 +52,6 @@ class PsdmController extends Controller
     public function destroy($id)
     {
         psdm::findOrFail($id)->delete();
-        return  redirect('/admin/psdm');
+        return  redirect('/admin/psdm')->with('success', 'Data berhasil dihapus.');
     }
 }

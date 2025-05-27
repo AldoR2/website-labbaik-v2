@@ -381,33 +381,6 @@
                                     <span>{{ $b->jabatan }}</span>
                                     <p>{{ $b->moto }}</p>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-                <div class="row justify-content-center">
-                    @foreach ($bph as $bp)
-                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="member d-flex align-items-start">
-                                <div class=""><img src="{{ url('storage/' . $bp->foto) }}"
-                                        {{-- class="img-fluid" --}} alt=""
-                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
-                                </div>
-                                <div class="member-info">
-                                    <h4>{{ $bp->nama }}</h4>
-                                    <span>{{ $bp->jabatan }}</span>
-                                    <p>{{ $bp->moto }}</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
                                     </div>
                                 </div>
                             </div>

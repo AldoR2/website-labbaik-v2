@@ -1,5 +1,33 @@
 @extends('admin.layouts.main')
 @section('content')
+
+@if (session('success'))
+    <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+@if ($errors->any())
+    <div class="alert alert-warning alert-dismissible fade show m-3" role="alert">
+        <strong>Terjadi kesalahan:</strong>
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+
+@if (session('error'))
+    <div class="alert alert-danger alert-dismissible fade show m-3" role="alert">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
     <div class="d-flex justify-content-between mt-1 p-3">
         <button class="btn btn-primary mt-3" type="button" data-bs-toggle="modal" data-bs-target="#addNew">
             <i class="mdi mdi-library-plus"></i>
@@ -20,7 +48,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $item)
+                @foreach ($syiar as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->nama }}</td>

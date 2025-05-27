@@ -23,7 +23,7 @@ class BphController extends Controller
         $bph = $request->all();
         $bph['foto'] = $request->file('foto')->store('bph', 'public');
         Bph::create($bph);
-        return redirect('/admin/bph');
+        return redirect('/admin/bph')->with('success', 'Data berhasil ditambahkan.');
     }
 
     public function update(Request $request, $id)
@@ -35,12 +35,12 @@ class BphController extends Controller
             unset($bph['foto']);
         }
         Bph::findOrFail($id)->update($bph);
-        return redirect('/admin/bph');
+        return redirect('/admin/bph')->with('success', 'Data berhasil diperbarui.');
     }
 
     public function destroy($id)
     {
         Bph::findOrFail($id)->delete();
-        return  redirect('/admin/bph');
+        return  redirect('/admin/bph')->with('success', 'Data berhasil dihapus.');
     }
 }

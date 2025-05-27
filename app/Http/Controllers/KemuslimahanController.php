@@ -12,8 +12,8 @@ class KemuslimahanController extends Controller
      */
     public function index()
     {
-        $data = Kemuslimahan::all();
-        return view('admin.departement.kemuslimahan.index', compact('data'));
+        $kemu = Kemuslimahan::all();
+        return view('admin.departement.kemuslimahan.index', compact('kemu'));
     }
 
     /**
@@ -28,23 +28,23 @@ class KemuslimahanController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('kemuslimahan', 'public');
-        Kemuslimahan::create($data);
-        return redirect('/admin/kemuslimahan');
+        $kemu = $request->all();
+        $kemu['foto'] = $request->file('foto')->store('kemuslimahan', 'public');
+        Kemuslimahan::create($kemu);
+        return redirect('/admin/kemuslimahan')->with('success', 'Data berhasil ditambahkan.');
     }
 
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('kemuslimahan', 'public');
+        $kemu = $request->all();
+        if (!empty($kemu['foto'])) {
+            $kemu['foto'] = $request->file('foto')->store('kemuslimahan', 'public');
         } else {
             unset($data['foto']);
         }
-        Kemuslimahan::findOrFail($id)->update($data);
-        return redirect('/admin/kemuslimahan');
+        Kemuslimahan::findOrFail($id)->update($kemu);
+        return redirect('/admin/kemuslimahan')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -53,6 +53,6 @@ class KemuslimahanController extends Controller
     public function destroy($id)
     {
         Kemuslimahan::findOrFail($id)->delete();
-        return  redirect('/admin/kemuslimahan');
+        return  redirect('/admin/kemuslimahan')->with('success', 'Data berhasil dihapus.');
     }
 }

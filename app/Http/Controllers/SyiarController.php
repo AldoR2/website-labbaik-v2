@@ -12,8 +12,8 @@ class SyiarController extends Controller
      */
     public function index()
     {
-        $data = Syiar::all();
-        return view('admin.departement.syiar.index', compact('data'));
+        $syiar = Syiar::all();
+        return view('admin.departement.syiar.index', compact('syiar'));
     }
 
     /**
@@ -28,23 +28,23 @@ class SyiarController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('syiar', 'public');
-        Syiar::create($data);
-        return redirect('/admin/syiar');
+        $syiar = $request->all();
+        $syiar['foto'] = $request->file('foto')->store('syiar', 'public');
+        Syiar::create($syiar);
+        return redirect('/admin/syiar')->with('success', 'Data berhasil ditambahkan.');
     }
 
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('syiar', 'public');
+        $syiar = $request->all();
+        if (!empty($syiar['foto'])) {
+            $syiar['foto'] = $request->file('foto')->store('syiar', 'public');
         } else {
-            unset($data['foto']);
+            unset($syiar['foto']);
         }
-        Syiar::findOrFail($id)->update($data);
-        return redirect('/admin/syiar');
+        Syiar::findOrFail($id)->update($syiar);
+        return redirect('/admin/syiar')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -53,6 +53,6 @@ class SyiarController extends Controller
     public function destroy($id)
     {
         Syiar::findOrFail($id)->delete();
-        return  redirect('/admin/syiar');
+        return  redirect('/admin/syiar')->with('success', 'Data berhasil dihapus.');
     }
 }

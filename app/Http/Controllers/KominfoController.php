@@ -12,8 +12,8 @@ class KominfoController extends Controller
      */
     public function index()
     {
-        $data = Kominfo::all();
-        return view('admin.departement.kominfo.index', compact('data'));
+        $kominfo = Kominfo::all();
+        return view('admin.departement.kominfo.index', compact('kominfo'));
     }
 
     /**
@@ -29,10 +29,10 @@ class KominfoController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('kominfo', 'public');
-        Kominfo::create($data);
-        return redirect('/admin/kominfo');
+        $kominfo = $request->all();
+        $kominfo['foto'] = $request->file('foto')->store('kominfo', 'public');
+        Kominfo::create($kominfo);
+        return redirect('/admin/kominfo')->with('success', 'Data berhasil ditambahkan.');
     }
 
     /**
@@ -56,14 +56,14 @@ class KominfoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('kominfo', 'public');
+        $kominfo = $request->all();
+        if (!empty($kominfo['foto'])) {
+            $kominfo['foto'] = $request->file('foto')->store('kominfo', 'public');
         } else {
-            unset($data['foto']);
+            unset($kominfo['foto']);
         }
-        Kominfo::findOrFail($id)->update($data);
-        return redirect('/admin/kominfo');
+        Kominfo::findOrFail($id)->update($kominfo);
+        return redirect('/admin/kominfo')->with('success', 'Data berhasil diperbarui.');
     }
 
     /**
@@ -72,6 +72,6 @@ class KominfoController extends Controller
     public function destroy($id)
     {
         Kominfo::findOrFail($id)->delete();
-        return  redirect('/admin/kominfo');
+        return  redirect('/admin/kominfo')->with('success', 'Data berhasil dihapus.');
     }
 }

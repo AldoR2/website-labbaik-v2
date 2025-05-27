@@ -56,12 +56,6 @@
                                     <h4>{{ $k->nama }}</h4>
                                     <span>{{ $k->departement }}</span>
                                     <p>{{ $k->moto }}</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -93,34 +87,12 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="row justify-content-center">
-                    @foreach ($syiarr as $ss)
-                        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="member d-flex align-items-start">
-                                <div class=""><img src="{{ url('storage/' . $ss->foto) }}" {{-- class="img-fluid" --}}
-                                        alt=""
-                                        style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
-                                </div>
-                                <div class="member-info">
-                                    <h4>{{ $ss->nama }}</h4>
-                                    <span>{{ $ss->departement }}</span>
-                                    <p>{{ $ss->moto }}</p>
-                                    <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+
                 <div class="section-title mt-5">
                     <h2>Departement Kemuslimahan</h2>
                 </div>
                 <div class="row">
-                    @foreach ($kemuslimahan as $km)
+                    @foreach ($kemu as $km)
                         <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                             <div class="member d-flex align-items-start">
                                 <div class=""><img src="{{ url('storage/' . $km->foto) }}"
