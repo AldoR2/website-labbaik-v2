@@ -22,9 +22,13 @@ class LandingPageController extends Controller
         $data = Blog::latest()->paginate(3);
         $rapats = Rapat::latest()->paginate(3);
         // dd($data);
-        $bph = Bph::where('angkatan', '2024')->paginate(4);
-        $bphAkhir = Bph::where('jabatan', 'wakil bendahara')->where('angkatan', '2024')->get();
-        return view('userGuest.index', ['data' => $data, 'rapats' => $rapats, 'bph' => $bph, 'bphAkhir' => $bphAkhir]);
+        $bph = Bph::all(); 
+        $bphAkhir = collect();
+    
+        return view('userGuest.index', compact('bph', 'bphAkhir')); // pastikan nama view sesuai
+
+        $artikel = Blog::latest()->get();
+        return view('userGuest.index', compact('artikel'));
     }
 
     /**

@@ -13,8 +13,8 @@ class rapatController extends Controller
      */
     public function index()
     {
-        $data = Rapat::all();
-        return view('admin.rapat.index', compact('data'));
+        $rapats = Rapat::all();
+        return view('admin.rapat.index', compact('rapats'));
     }
 
     /**

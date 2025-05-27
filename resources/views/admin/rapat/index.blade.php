@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $item)
+                @foreach ($rapats as $item)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->agenda_rapat }}</td>

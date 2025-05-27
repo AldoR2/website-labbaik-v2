@@ -11,29 +11,30 @@ class BphController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $data = Bph::all();
-        return view('admin.bph.index', compact('data'));
-    }
+{
+    $bph = Bph::all();
+
+    return view('admin.bph.index', compact('bph'));
+}
 
 
     public function store(Request $request)
     {
-        $data = $request->all();
-        $data['foto'] = $request->file('foto')->store('bph', 'public');
-        Bph::create($data);
+        $bph = $request->all();
+        $bph['foto'] = $request->file('foto')->store('bph', 'public');
+        Bph::create($bph);
         return redirect('/admin/bph');
     }
 
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-        if (!empty($data['foto'])) {
-            $data['foto'] = $request->file('foto')->store('bph', 'public');
+        $bph = $request->all();
+        if (!empty($bph['foto'])) {
+            $bph['foto'] = $request->file('foto')->store('bph', 'public');
         } else {
-            unset($data['foto']);
+            unset($bph['foto']);
         }
-        Bph::findOrFail($id)->update($data);
+        Bph::findOrFail($id)->update($bph);
         return redirect('/admin/bph');
     }
 

@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class=" col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ URL::asset('assets/images/logo_LABAIK.png') }}" class="img-fluid animated"
+                    <img src="{{ asset('assets/images/Logo Labbaik.png') }}" class="img-fluid animated" alt="Logo Labbaik" width="250">
                         alt="" width="250">
                 </div>
             </div>
@@ -221,7 +221,7 @@
                     <h2>Artikel</h2>
                 </div>
                 <div class="row">
-                    @foreach ($data as $item)
+                    @foreach ($artikel as $item)
                         <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
                             <div class="member d-flex align-items-start">
                                 <a href="#" data-bs-toggle="modal"
@@ -392,7 +392,7 @@
                     @endforeach
                 </div>
                 <div class="row justify-content-center">
-                    @foreach ($bphAkhir as $bp)
+                    @foreach ($bph as $bp)
                         <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                             <div class="member d-flex align-items-start">
                                 <div class=""><img src="{{ url('storage/' . $bp->foto) }}"
