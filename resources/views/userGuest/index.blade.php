@@ -75,6 +75,24 @@
             /* Sesuaikan lebar modal sesuai kebutuhan */
         }
 
+        .motto-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px;
+            line-height: 1.6;
+            color: #555;
+            margin-top: 5px;
+            font-style: italic;
+            }
+
+            .motto-grid strong {
+            font-style: normal;
+            }
+
+            .motto-grid i {
+            color: #3498db;
+            }
+
         section#rapat {
             margin-top: -90px !important;
         }
@@ -99,16 +117,7 @@
                     {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li> --}}
                     <li><a class="nav-link scrollto" href="#services">Visi Misi</a></li>
                     <li><a class="nav-link scrollto" href="#artikel">Artikel</a></li>
-                    <li class="dropdown"><a href="#"><span>Departement</span> <i
-                                class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#team">Kominfo</a></li>
-                            <li><a href="#team">Syiar</a></li>
-                            <li><a href="#team">Kemuslimahan</a></li>
-                            <li><a href="#team">PSDM</a></li>
-                            <li><a href="#team">KWU</a></li>
-                        </ul>
-                    </li>
+                    <li><a class="nav-link scrollto" href="/detail-anggota">Departemen</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     <li><a class="getstarted scrollto" href="/login">Login</a></li>
                 </ul>
@@ -135,7 +144,7 @@
                 </div>
                 <div class=" col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="200">
                     <img src="{{ asset('assets/images/Logo Labbaik.png') }}" class="img-fluid animated" alt="Logo Labbaik" width="250">
-                        alt="" width="250">
+                        <alt="" width="250">
                 </div>
             </div>
         </div>
@@ -376,11 +385,30 @@
                                         {{-- class="img-fluid" --}} alt=""
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
-                                <div class="member-info">
-                                    <h4>{{ $b->nama }}</h4>
-                                    <span>{{ $b->jabatan }}</span>
-                                    <p>{{ $b->moto }}</p>
+                               <div class="member-info">
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $b->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $b->jabatan }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $b->angkatan }}
+                                    </p>
+                                    <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $b->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $b->tanggal_lahir }}
+                                        </p>
+                                    <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $b->moto }}"</em></span>
+                                        </div>
+
                                     <div class="social">
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -391,8 +419,6 @@
             <div class=" mt-3 d-flex justify-content-center align-content-center align-items-center more">
                 <a href="/detail-anggota" class="btn btn-outline-info col-lg-2 ">Anggota Lain</a>
             </div>
-
-
             {{-- <div class="section-title content">
                 <a href="#"
                     class="anggota btn btn-outline-info col-lg-3 justify-content-end align-content-end align-items-end"

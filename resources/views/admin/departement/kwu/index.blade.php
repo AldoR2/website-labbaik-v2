@@ -41,6 +41,7 @@
                     <th>Nama</th>
                     <th>Tanggal Lahir</th>
                     <th>Jabatan</th>
+                    <th>Prodi</th>
                     <th>Angkatan</th>
                     <th>Foto</th>
                     <th class="deskripsi">Moto</th>
@@ -54,6 +55,7 @@
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->tanggal_lahir }}</td>
                         <td>{{ $item->departement }}</td>
+                        <td>{{ $item->prodi }}</td>
                         <td>{{ $item->angkatan }}</td>
                         <td><img src="{{ url('storage/' . $item->foto) }}"
                                 style="width: 50px; height: 50px; object-fit: cover;" alt="gambar" class="rounded-circle">
@@ -109,6 +111,11 @@
                                             <label for="departement" class="mb-1">Jabatan</label>
                                             <input type="text" class="form-control" id="departement" name="departement"
                                                 value="{{ $item->departement }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="prodi" class="mb-1">Prodi</label>
+                                            <input type="text" class="form-control" id="prodi" name="prodi"
+                                                value="{{ $item->prodi }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="angkatan" class="mb-1">Angkatan</label>
@@ -206,6 +213,11 @@
                         <label for="departement" class="mb-1">Jabatan</label>
                         <input type="text" class="form-control" id="departement" name="departement"
                             placeholder="input jabatan ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prodi" class="mb-1">Prodi</label>
+                        <input type="text" class="form-control" id="prodi" name="prodi"
+                            placeholder="input prodi ">
                     </div>
                     <div class="mb-3">
                         <label for="angkatan" class="mb-1">Angkatan</label>

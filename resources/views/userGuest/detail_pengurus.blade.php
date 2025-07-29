@@ -34,14 +34,63 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+     .motto-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px;
+            line-height: 1.6;
+            color: #555;
+            margin-top: 5px;
+            font-style: italic;
+            }
+
+            .motto-grid strong {
+            font-style: normal;
+            }
+
+            .motto-grid i {
+            color: #3498db;
+            }
+  </style>
 </head>
 
 <body>
+        <!-- ======= Header ======= -->
+     <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+            <h1 class="logo me-auto logo-labbaik" style="color: rgb(255, 255, 255); font-weight: bold;">UKM Labbaik
+            </h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/">About</a></li>
+                    {{-- <li><a class="nav-link scrollto" href="#team">Team</a></li> --}}
+                    <li><a class="nav-link scrollto" href="/">Visi Misi</a></li>
+                    <li><a class="nav-link scrollto" href="/">Artikel</a></li>
+                    <li class="dropdown"><a href="#"><span>Departement</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#kominfo">Kominfo</a></li>
+                            <li><a href="#syiar">Syiar</a></li>
+                            <li><a href="#kemuslimahan">Kemuslimahan</a></li>
+                            <li><a href="#psdm">PSDM</a></li>
+                            <li><a href="#kewirausahaan">KWU</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="getstarted scrollto" href="/login">Login</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
     <main id="main">
         <section id="team" class="team section-bg" style="padding-top:5rem;">
             <div class="container" data-aos="fade-up">
 
-                <div class="section-title">
+                <div class="section-title" id="kominfo">
                     <h2>Departement Kominfo</h2>
                 </div>
                 <div class="row">
@@ -53,15 +102,35 @@
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
                                 <div class="member-info">
-                                    <h4>{{ $k->nama }}</h4>
-                                    <span>{{ $k->departement }}</span>
-                                    <p>{{ $k->moto }}</p>
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $k->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $k->departement }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $k->angkatan }}
+                                    </p>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $k->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $k->tanggal_lahir }}
+                                        </p>
+                                   <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $k->moto }}"</em></span>
+                                        </div>
+                                    <div class="social">
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                <div class="section-title mt-5">
+                <div class="section-title mt-5" id="syiar">
                     <h2>Departement Syiar</h2>
                 </div>
                 <div class="row">
@@ -73,14 +142,28 @@
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
                                 <div class="member-info">
-                                    <h4>{{ $s->nama }}</h4>
-                                    <span>{{ $s->departement }}</span>
-                                    <p>{{ $s->moto }}</p>
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $s->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $s->departement }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $s->angkatan }}
+                                    </p>
+                                    <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $s->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $s->tanggal_lahir }}
+                                        </p>
+                                   <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $s->moto }}"</em></span>
+                                        </div>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +171,7 @@
                     @endforeach
                 </div>
 
-                <div class="section-title mt-5">
+                <div class="section-title mt-5" id="kemuslimahan">
                     <h2>Departement Kemuslimahan</h2>
                 </div>
                 <div class="row">
@@ -100,21 +183,35 @@
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
                                 <div class="member-info">
-                                    <h4>{{ $km->nama }}</h4>
-                                    <span>{{ $km->departement }}</span>
-                                    <p>{{ $km->moto }}</p>
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $km->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $km->departement }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $km->angkatan }}
+                                    </p>
+                                    <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $km->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $km->tanggal_lahir }}
+                                        </p>
+                                    <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $km->moto }}"</em></span>
+                                        </div>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                <div class="section-title mt-5">
+                <div class="section-title mt-5" id="psdm">
                     <h2>Departement PSDM</h2>
                 </div>
                 <div class="row">
@@ -126,21 +223,35 @@
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
                                 <div class="member-info">
-                                    <h4>{{ $p->nama }}</h4>
-                                    <span>{{ $p->departement }}</span>
-                                    <p>{{ $p->moto }}</p>
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $p->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $p->departement }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $p->angkatan }}
+                                    </p>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $p->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $p->tanggal_lahir }}
+                                        </p>
+                                   <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $p->moto }}"</em></span>
+                                        </div>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
-                <div class="section-title mt-5">
+                <div class="section-title mt-5" id="kewirausahaan">
                     <h2>Departement KWU</h2>
                 </div>
                 <div class="row">
@@ -152,14 +263,28 @@
                                         style="height: 155px !important; object-fit: cover; width:110px; border-radius: 20px;">
                                 </div>
                                 <div class="member-info">
-                                    <h4>{{ $kw->nama }}</h4>
-                                    <span>{{ $kw->departement }}</span>
-                                    <p>{{ $kw->moto }}</p>
+                                 <h4 style="font-weight: 700; font-size: 20px; color: #2c3e50;">
+                                   {{ $kw->nama }}
+                                    </h4>
+                                    <span style="font-style: italic; color: #7f8c8d;">
+                                    {{ $kw->departement }}
+                                    </span>
+                                     <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Angkatan:</strong> {{ $kw->angkatan }}
+                                    </p>
+                                    <p><i class="fa fa-user-graduate" style="margin-right: 5px;"></i> 
+                                     <strong>Prodi:</strong> {{ $kw->prodi }}
+                                    </p>
+                                        <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
+                                            <strong>Tanggal Lahir:</strong> {{ $kw->tanggal_lahir }}
+                                        </p>
+                                    <div class="motto-grid">
+                                        <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
+                                        <span><em>"{{ $kw->moto }}"</em></span>
+                                        </div>
                                     <div class="social">
-                                        <a href=""><i class="ri-twitter-fill"></i></a>
-                                        <a href=""><i class="ri-facebook-fill"></i></a>
-                                        <a href=""><i class="ri-instagram-fill"></i></a>
-                                        <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                        {{-- Tambahkan link jika ada --}}
+                                        {{-- <a href="#"><i class="fab fa-instagram"></i></a> --}}
                                     </div>
                                 </div>
                             </div>
