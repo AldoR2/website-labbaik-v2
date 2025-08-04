@@ -201,7 +201,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="tanggal_lahir" class="mb-1">Tanggal Lahir</label>
-                        <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required
+                        <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" 
                             placeholder="input tanggal lahir">
                     </div>
                     <div class="mb-3">
