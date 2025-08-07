@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -17,10 +20,10 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(\Illuminate\Http\Request $request): void
+    public function boot(Request $request): void
     {
-        // if (!empty(env('APP_URL')) && $request->server->has('http://localhost')) {
-        //     $this->app['url']->forceRootUrl(env('APP_URL'));
-        // }
+        // Set locale Carbon ke Bahasa Indonesia
+        setlocale(LC_TIME, 'id_ID.UTF-8');
+        Carbon::setLocale('id');
     }
 }

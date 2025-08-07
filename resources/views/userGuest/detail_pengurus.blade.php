@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>UKM LABBAIK</title>
-    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_labbaik.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/assets/images/Logo Labbaik.png') }}">
     <!-- Favicons -->
     <link href="{{ asset('user/assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -115,7 +115,7 @@
                                      <strong>Prodi:</strong> {{ $k->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $k->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $k->tanggal_lahir ? \Carbon\Carbon::parse($k->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                    <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -155,7 +155,7 @@
                                      <strong>Prodi:</strong> {{ $s->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $s->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $s->tanggal_lahir ? \Carbon\Carbon::parse($s->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                    <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -196,7 +196,7 @@
                                      <strong>Prodi:</strong> {{ $km->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $km->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $km->tanggal_lahir ? \Carbon\Carbon::parse($km->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                     <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -236,7 +236,7 @@
                                      <strong>Prodi:</strong> {{ $p->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $p->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $p->tanggal_lahir ? \Carbon\Carbon::parse($p->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                    <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -276,7 +276,7 @@
                                      <strong>Prodi:</strong> {{ $kw->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $kw->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $kw->tanggal_lahir ? \Carbon\Carbon::parse($kw->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                     <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -365,9 +365,10 @@
             <div class="copyright">
                 &copy; Copyright <strong><span>UKM Labbaik</span></strong>
             </div>
+           {{--
             <div class="credits">
                 Development by <a href="https://www.linkedin.com/in/ahmad-hidayat-a6120b220/">Ahmad Hidayat</a>
-            </div>
+            </div> --}}
         </div>
     </footer>
     <!-- End Footer -->

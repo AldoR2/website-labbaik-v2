@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>UKM LABBAIK</title>
-    <link rel="shortcut icon" href="{{ asset('/assets/images/logo_labbaik.png') }}">
+    <link rel="shortcut icon" href="{{ asset('/assets/images/Logo Labbaik.png') }}">
     <!-- Favicons -->
     <link href="{{ asset('/user/assets/img/favicon.png') }}" rel="icon">
     <link href="{{ asset('/users/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
@@ -255,7 +255,7 @@
                                 <div class="modal-content mt-5">
                                     <div class="modal-header">
                                         <p class="modal-title" id="exampleModalLabel">
-                                            <b> Post : </b>{{ $item->tanggal_post }}
+                                            <b> Post : </b> {{ \Carbon\Carbon::parse($item->tanggal_post)->translatedFormat('d F Y') }}
                                         </p>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -320,7 +320,7 @@
                                 <div class="modal-content mt-5">
                                     <div class="modal-header">
                                         <p class="modal-title" id="exampleModalLabel">
-                                            <b> Post : </b>{{ $rapat->tanggal_rapat }}
+                                            <b> Post : </b>{{ \Carbon\Carbon::parse($rapat->tanggal_rapat)->translatedFormat('d F Y') }}
                                         </p>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -339,7 +339,7 @@
                                                         <b>Note:</b><br>{{ $rapat->note }} !!
                                                     </p>
                                                     <p style="text-align: justify;">
-                                                        <b>Waktu:</b><br>{{ $rapat->tanggal_rapat }}
+                                                        <b>Waktu:</b><br>{{ \Carbon\Carbon::parse($rapat->tanggal_rapat)->translatedFormat('d F Y') }}
                                                     </p>
                                                     <p style="text-align: justify;">
                                                         <b>Tempat:</b><br>{{ $rapat->tempat_rapat }}
@@ -399,7 +399,7 @@
                                      <strong>Prodi:</strong> {{ $b->prodi }}
                                     </p>
                                         <p><i class="fa fa-calendar-alt" style="margin-right: 5px;"></i> 
-                                            <strong>Tanggal Lahir:</strong> {{ $b->tanggal_lahir }}
+                                            <strong>Tanggal Lahir:</strong> {{ $b->tanggal_lahir ? \Carbon\Carbon::parse($b->tanggal_lahir)->translatedFormat('d F Y') : '-' }} 
                                         </p>
                                     <div class="motto-grid">
                                         <span><i class="fa fa-quote-left" style="margin-right: 5px;"></i><strong>Motto:</strong></span>
@@ -540,13 +540,13 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p> labbaikpolije01@gmail.com</p>
+                                <p> ukm.labaik@polije.ac.id</p>
                             </div>
 
                             <div class="phone">
                                 <i class="bi bi-phone"></i>
                                 <h4>Call:</h4>
-                                <p>+1 5589 55488 55s</p>
+                                <p>082143131449</p>
                             </div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.4235573861815!2d113.72061207358728!3d-8.160010181752565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd695b617d8f623%3A0xf6c4437632474338!2sPoliteknik%20Negeri%20Jember!5e0!3m2!1sid!2sid!4v1698975674838!5m2!1sid!2sid"
@@ -616,13 +616,13 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>UKM labbaik</h3>
+                        <h3>UKM Labbaik</h3>
                         <p>
                             Jl. Mastrip <br>
                             POBOX 164 Sumbersari<br>
                             Jember<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> labbaikpolije01@gmail.com<br>
+                            <strong>Phone:</strong> 082143131449<br>
+                            <strong>Email:</strong>ukm.labaik@polije.ac.id<br>
                         </p>
                     </div>
 
