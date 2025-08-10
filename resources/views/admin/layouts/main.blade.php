@@ -83,13 +83,13 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                      Swal.fire({
-                                    title: '<span>Do you want to logout ?</span>',
+                                    title: '<span> Apakah Anda yakin ingin keluar ?</span>',
                                     icon: 'question',
                                     showCancelButton: true,
                                     confirmButtonColor: '#d33',
                                     cancelButtonColor: '#3085d6',
-                                    confirmButtonText: 'Yes',
-                                    cancelButtonText: 'Cancel',
+                                    confirmButtonText: 'Iya',
+                                    cancelButtonText: 'Tidak',
                                     width:'400px'
                                 }).then((result) => {
                                     if (result.isConfirmed) {

@@ -119,7 +119,6 @@
                     <li><a class="nav-link scrollto" href="#artikel">Artikel</a></li>
                     <li><a class="nav-link scrollto" href="/detail-anggota">Departemen</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="/login">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -137,7 +136,6 @@
                     <h1>Salam labbaik !!!</h1>
                     <h2>Bersama labbaik ayo lebih baik...</h2>
                     <div class="d-flex justify-content-center ">
-                        <a href="/login" class="btn-get-started scrollto">Login</a>
                         <a href="https://youtu.be/Wk1Hg7Ehj_A?si=SsY4yU5wLn3plPqo" class="glightbox btn-watch-video"><i
                                 class="bi bi-play-circle"></i><span>Watch Video</span></a>
                     </div>
@@ -176,7 +174,7 @@
                 <div class="section-title content">
                     <a href="#"
                         class="btn-learn-more col-lg-3 justify-content-end align-content-end align-items-end">Join
-                        labbaik yuk</a>
+                        Labbaik yuk!</a>
                 </div>
             </div>
         </section><!-- End About Us Section -->

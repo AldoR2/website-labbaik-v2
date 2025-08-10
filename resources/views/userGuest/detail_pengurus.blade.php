@@ -52,6 +52,9 @@
             .motto-grid i {
             color: #3498db;
             }
+     #header {
+    background-color: #2c3e50; /* biru gelap */
+}
   </style>
 </head>
 
@@ -79,7 +82,6 @@
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="/login">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
